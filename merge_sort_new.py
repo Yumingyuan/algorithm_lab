@@ -22,7 +22,7 @@ def sort(need_sort_list,low,high):
 	if high<=low:
 		return 
 	mid=int(low+int((high-low)/2))
-	print('current sort:',need_sort_list[low:high+1],"low mid and high:",low,mid,high)
+	print('current sort data:',need_sort_list[low:high+1],"low mid and high:",low,mid,high)
 	sort(need_sort_list,low,mid)
 	sort(need_sort_list,mid+1,high)
 	merge(need_sort_list,low,mid,high)
