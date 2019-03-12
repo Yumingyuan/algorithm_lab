@@ -1,6 +1,6 @@
 # algorithm_lab
 
-Platform:Linux lsb_relesae 2.6
+Platform:Linux 4.15.0-kali2-amd64
 
 Language:Python 3.6
 
