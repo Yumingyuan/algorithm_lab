@@ -20,6 +20,13 @@ def parent(search_data,i):
 	elif i/2>=1:
 		result=search_data[int(i/2)]
 	return result
+def height(search_data):
+	count=0
+	i=1
+	while left(search_data,i) is not None:
+		i=i*2
+		count=count+1
+	return count
 test_data=[0,16,14,10,8,7,9,3,2,4,1]
 print("5's left son:",left(test_data,5))
 print("6's left son:",left(test_data,6))
@@ -28,3 +35,4 @@ print("6's right son:",right(test_data,6))
 print("1's parent:",parent(test_data,1))
 print("11's parent:",parent(test_data,11))
 print("5's parent:",parent(test_data,5))
+print("test_data tree's heigth:",height(test_data))
