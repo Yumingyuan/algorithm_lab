@@ -17,12 +17,12 @@ def merge(need_sort_list,low,mid,high):
 			index2=index2+1
 		else:
 			pass
-	print("merge:",after_sort)
+	print("After merge:",after_sort)
 def sort(need_sort_list,low,high):
 	if high<=low:
 		return 
-	print('current sort:',need_sort_list[low:high+1])
 	mid=int(low+int((high-low)/2))
+	print('current sort:',need_sort_list[low:high+1],"low mid and high:",low,mid,high)
 	sort(need_sort_list,low,mid)
 	sort(need_sort_list,mid+1,high)
 	merge(need_sort_list,low,mid,high)
