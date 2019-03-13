@@ -18,7 +18,8 @@ def union(search_set,p,q):
 def kruskal_prim(sorted_list,vertex_set_list):
 	for i in range(0,len(sorted_list)):
 		if find_set(vertex_set_list,sorted_list[i][0])!=find_set(vertex_set_list,sorted_list[i][1]):
-			union(vertex_set_list,sorted_list[i][0],sorted_list[i][1],rank)
+			union(vertex_set_list,sorted_list[i][0],sorted_list[i][1])
+			print("choose edge's weight",sorted_list[i][2])
 def tekethird(elem):
 	return elem[2]			
 if __name__=='__main__':
