@@ -62,13 +62,12 @@ def build_heap(search_data):
 	length=len(search_data)
 	mid=length/2
 	mid=int(mid+1)
-	print(mid)
 	for i in range(mid,0,-1):
 		heapify(search_data,i)
-	
 if __name__=="__main__":
 	test_data=[0,16,14,10,8,7,9,3,2,4,1]
 	test_data1=[0,4,5,3,2,7,9,1,11,8,12]
+	test_data2=[0,4,5,3,2,7,9,1,11,8,12]
 	print("5's left son:",left(test_data,5))
 	print("6's left son:",left(test_data,6))
 	print("3's right son:",right(test_data,3))
@@ -77,7 +76,7 @@ if __name__=="__main__":
 	print("11's parent:",parent(test_data,11))
 	print("5's parent:",parent(test_data,5))
 	print("test_data tree's heigth:",height(test_data,2))
-	print("begin heapify the node 1:")
+	print("begin heapify the node 1:",test_data1)
 	heapify(test_data1,1)
-	print("before build heap:",test_data1)
-	build_heap(test_data1)
+	print("begin build heap:",test_data2)
+	build_heap(test_data2)
