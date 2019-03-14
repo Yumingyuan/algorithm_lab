@@ -77,6 +77,6 @@ if __name__=="__main__":
 	print("5's parent:",parent(test_data,5))
 	print("test_data tree's heigth:",height(test_data,2))
 	print("begin heapify the node 1:")
-	#heapify(test_data1,1)
-	print(test_data1)
+	heapify(test_data1,1)
+	print("before build heap:",test_data1)
 	build_heap(test_data1)
