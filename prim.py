@@ -25,9 +25,7 @@ def prim_aloorithm(edges,vertex_len):
 		for o in range(0,vertex_len):
 			if(edges[selected_vertex][o]!=0 and edges[selected_vertex][o]!=65535 and edges[selected_vertex][o]<lowcost[o]):
 				lowcost[o]=edges[selected_vertex][o]
-	print("vertex choose sequence:",choice,"sum weight:",count_sum)
-				
-							
+	print("vertex choose sequence:",choice,"sum weight:",count_sum)				
 if __name__=='__main__':
 	edges=[[0,2,65535,4],[2,0,7,5],[65535,7,0,3],[4,5,3,0]]
 	prim_aloorithm(edges,len(edges))
