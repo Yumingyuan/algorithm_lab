@@ -57,6 +57,7 @@ def heapify(search_data,i):
 			search_data[largest]=temp
 			print("heapify:",i,search_data)
 		heapify(search_data,largest)
+#build function,to build up a big heap
 def build_heap(search_data):
 	length=len(search_data)
 	mid=length/2
