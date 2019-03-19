@@ -10,7 +10,6 @@ for i in range(1,length):
 	while j>0 and list_unsort[j-1]>temp_num:
 		list_unsort[j]=list_unsort[j-1]
 		j=j-1
-		print(i,j)
 	list_unsort[j]=temp_num
 print('After sort:',list_unsort)
 	
