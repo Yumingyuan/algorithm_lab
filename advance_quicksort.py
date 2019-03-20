@@ -3,9 +3,9 @@ def insert_sort(search_data,low,high):
 		j=i
 		temp_num=search_data[j]#to insert's num compare from i-1 to low
 		while j>low and search_data[j-1]>temp_num:
-			search_data[j]=search_data[j-1]
+			search_data[j]=search_data[j-1]#move [j-1] to [j]
 			j=j-1
-		search_data[j]=temp_num
+		search_data[j]=temp_num#make the temp_num the right place
 def QuickSort(search_data,low,high):
 	if high>low:
 		k=Partitions(search_data,low,high)
