@@ -1,7 +1,7 @@
 def insert_sort(search_data,low,high):
 	for i in range(low+1,high+1):
 		j=i
-		temp_num=search_data[j]#to insert's num compare from i-1 to 0
+		temp_num=search_data[j]#to insert's num compare from i-1 to low
 		while j>low and search_data[j-1]>temp_num:
 			search_data[j]=search_data[j-1]
 			j=j-1
