@@ -2,7 +2,7 @@
 def binary_search(data_list,root,key):
 	print("search's root node:",root,"for key:",key)
 	if root>=len(data_list):#当搜索的树根节点索引大于树的规模时，未搜索到，返回
-		return -1
+		return -1#未查找到结果的情况
 	if key==data_list[root]:#当前搜索到的根节点对应的索引值等于key，则返回索引值下标
 		return root
 	elif key>data_list[root]:#当前搜索到根节点对应的索引值的元素值小于key，则递归查询右子树
