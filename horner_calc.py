@@ -4,5 +4,5 @@ def horner(data_list,x):
 		p=p*x+data_list[i]#计算:b*x+c
 	return p
 if __name__=="__main__":
-	data_set=[2,-1,3,1,-5]
+	data_set=[2,-1,3,1,-5]#系数
 	print("calc result:",horner(data_set,3))#函数调用
