@@ -22,6 +22,7 @@ def initial_permutation(key):
 Sbox：sbox_list
 xor加密数据：encrypt_data
 return:crypt_result
+加密函数与解密函数一致都是rc4_encrypt
 '''
 def rc4_encrypt(sbox_list,encrypt_data):
 	i=0
