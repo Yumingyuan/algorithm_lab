@@ -39,7 +39,7 @@ if __name__=="__main__":
 	input_encrypt_data=str(input("input data need encrypt>"))#输入待加密数据
 	sbox_result=initial_permutation(input_key)#初始化加密用sbox
 	#sbox_backup=sbox_result#浅拷贝不行！！！可import copy解决
-	sbox_backup=initial_permutation(input_key)#初始化解密用sbox
+	sbox_backup=initial_permutation(input_key)#初始化解密用sbox（加密处理后的sbox_result已经被扰乱了）
 	encrypt_result=rc4_encrypt(sbox_result,input_encrypt_data)#加密函数调用
 	print("encrypted result:",encrypt_result)
 	decrypt_result=rc4_encrypt(sbox_backup,encrypt_result)#解密函数调用
