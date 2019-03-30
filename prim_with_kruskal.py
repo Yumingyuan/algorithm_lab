@@ -22,7 +22,7 @@ def kruskal_prim(sorted_list,vertex_set_list):
 			union(vertex_set_list,sorted_list[i][0],sorted_list[i][1])
 			print("choose edge's weight",sorted_list[i][2])
 def tekethird(elem):
-	return elem[2]			
+	return elem[2]#返回第三个元素			
 if __name__=='__main__':
 	edges=[[0,2,65535,4],[2,0,7,5],[65535,7,0,3],[4,5,3,0]]
 	need_sort_edges=[]
