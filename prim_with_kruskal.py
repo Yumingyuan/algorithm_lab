@@ -7,7 +7,7 @@ def find_set(search_set,x):
 	if x>len(search_set)-1:#当查找的数据超过树的大小，则不符合要求
 		return -1
 	return search_set[x]#返回查找结果
-def union(search_set,p,q):
+def union(search_set,p,q):#合并操作
 	pid=p
 	qid=q
 	if pid==qid:
@@ -30,7 +30,7 @@ if __name__=='__main__':
 	vertex_set,rank=make_set(len(edges))#创建集合
 	for i in range(0,len(edges)):
 		for j in range(0,len(edges[i])):
-			#排除无效边集
+			#排除无效边:不联通的和加入后形成环路的
 			if edges[i][j]!=65535 and edges[i][j]!=0 and (j,i,edges[i][j]) not in need_sort_edges:
 				#make the two vertex and the edge the two vertex associated with in the list "need_sort_edges"
 				need_sort_edges.append((i,j,edges[i][j]))
