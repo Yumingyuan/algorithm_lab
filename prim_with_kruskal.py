@@ -15,7 +15,7 @@ def union(search_set,p,q):
 	for i in range(0,len(search_set)):
 		if search_set[i]==pid:
 			search_set[i]=search_set[qid]
-	print("after union:",search_set)
+	#print("after union:",search_set)
 def kruskal_prim(sorted_list,vertex_set_list):
 	for i in range(0,len(sorted_list)):
 		if find_set(vertex_set_list,sorted_list[i][0])!=find_set(vertex_set_list,sorted_list[i][1]):
@@ -27,7 +27,7 @@ if __name__=='__main__':
 	edges=[[0,2,65535,4],[2,0,7,5],[65535,7,0,3],[4,5,3,0]]
 	need_sort_edges=[]
 	#init the vertex set
-	vertex_set,rank=make_set(len(edges))
+	vertex_set,rank=make_set(len(edges))#创建集合
 	for i in range(0,len(edges)):
 		for j in range(0,len(edges[i])):
 			#except the same vertex
