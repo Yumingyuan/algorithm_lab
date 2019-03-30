@@ -15,7 +15,7 @@ def union(search_set,p,q):#合并操作
 	for i in range(0,len(search_set)):
 		if search_set[i]==pid:
 			search_set[i]=search_set[qid]
-	#print("after union:",search_set)
+	print("after union:",search_set)
 def kruskal_prim(sorted_list,vertex_set_list):
 	for i in range(0,len(sorted_list)):
 		if find_set(vertex_set_list,sorted_list[i][0])!=find_set(vertex_set_list,sorted_list[i][1]):
@@ -34,7 +34,7 @@ if __name__=='__main__':
 			if edges[i][j]!=65535 and edges[i][j]!=0 and (j,i,edges[i][j]) not in need_sort_edges:
 				#make the two vertex and the edge the two vertex associated with in the list "need_sort_edges"
 				need_sort_edges.append((i,j,edges[i][j]))
-	need_sort_edges.sort(key=tekethird)#sort by third element
+	need_sort_edges.sort(key=tekethird)#按照边的长度进行排序，i是起始节点，j是终止节点，关联边
 	print("after sort:",need_sort_edges)#now the list is sorted
 	kruskal_prim(need_sort_edges,vertex_set)
 	#print("vertex_set:",vertex_set)
