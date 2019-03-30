@@ -37,3 +37,4 @@ if __name__=='__main__':
 	need_sort_edges.sort(key=tekethird)#sort by third element
 	print("after sort:",need_sort_edges)#now the list is sorted
 	kruskal_prim(need_sort_edges,vertex_set)
+	print("vertex_set:",vertex_set)
