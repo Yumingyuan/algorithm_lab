@@ -30,11 +30,11 @@ if __name__=='__main__':
 	vertex_set,rank=make_set(len(edges))#创建集合
 	for i in range(0,len(edges)):
 		for j in range(0,len(edges[i])):
-			#排除无效边:不联通的和加入后形成环路的
+			#排除无效边:不联通的和加入后形成环路的不能加入
 			if edges[i][j]!=65535 and edges[i][j]!=0 and (j,i,edges[i][j]) not in need_sort_edges:
 				#make the two vertex and the edge the two vertex associated with in the list "need_sort_edges"
 				need_sort_edges.append((i,j,edges[i][j]))
 	need_sort_edges.sort(key=tekethird)#sort by third element
 	print("after sort:",need_sort_edges)#now the list is sorted
 	kruskal_prim(need_sort_edges,vertex_set)
-	print("vertex_set:",vertex_set)
+	#print("vertex_set:",vertex_set)
