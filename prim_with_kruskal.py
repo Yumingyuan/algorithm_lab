@@ -1,11 +1,12 @@
+# -*- coding: utf-8 -*-
 def make_set(x):
-	p=[i for i in range(0,x)]#generate the dataset of vertex set
-	rank=[0 for i in range(0,x)]#generate the rank
+	p=[i for i in range(0,x)]#生成边集合
+	rank=[0 for i in range(0,x)]#生成kruskal的长度集合
 	return p,rank
 def find_set(search_set,x):
-	if x>len(search_set)-1:#x is higher than the length of the tree
+	if x>len(search_set)-1:#当查找的数据超过树的大小，则不符合要求
 		return -1
-	return search_set[x]#return the find x'th value
+	return search_set[x]#返回查找结果
 def union(search_set,p,q):
 	pid=p
 	qid=q
