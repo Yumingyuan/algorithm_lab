@@ -11,13 +11,14 @@ def reverselist(need_reverse_list):#将列表进行反转
 def multi(stra,strb):
 	list_a=list(stra)
 	list_b=list(strb)
-	print(list_a,list_b)
+	#print(list_a,list_b)
 	length_a=len(list_a)
 	length_b=len(list_b)
 	result_list=[0 for i in range(length_a+length_b)]#创建一个长度等于两个乘数长度总和的列表
 	for i in range(length_a):
 		for j in range(length_b):
 			result_list[length_a-i-1+length_b-j-1]+=int(list_a[i])*int(list_b[j])#逆序存入
+			print(i,j,result_list)
 	for i in range(len(result_list)-1):
 		if result_list[i]>=10:
 			result_list[i+1]+=result_list[i]/10#大于10则进位
