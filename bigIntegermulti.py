@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 import sys
-def reverselist(need_reverse_list):
+def reverselist(need_reverse_list):#将列表进行反转
 	i=0
 	while need_reverse_list[i]==0:
 		i+=1
