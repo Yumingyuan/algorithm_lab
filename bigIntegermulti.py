@@ -14,15 +14,15 @@ def multi(stra,strb):
 	print(list_a,list_b)
 	length_a=len(list_a)
 	length_b=len(list_b)
-	result_list=[0 for i in range(length_a+length_b)]
+	result_list=[0 for i in range(length_a+length_b)]#创建一个长度等于两个乘数长度总和的列表
 	for i in range(length_a):
 		for j in range(length_b):
-			result_list[length_a-i-1+length_b-j-1]+=int(list_a[i])*int(list_b[j])
+			result_list[length_a-i-1+length_b-j-1]+=int(list_a[i])*int(list_b[j])#逆序存入
 	for i in range(len(result_list)-1):
 		if result_list[i]>=10:
-			result_list[i+1]+=result_list[i]/10
-			result_list[i]=result_list[i]%10
-	return reverselist(result_list[::-1])
+			result_list[i+1]+=result_list[i]/10#大于10则进位
+			result_list[i]=result_list[i]%10#把当前位加入当前位置
+	return reverselist(result_list[::-1])#反转列表
 if __name__=="__main__":
 	if len(sys.argv)!=3:
 		print("please input 2 argument [Bigint1] [Bigint2]")
