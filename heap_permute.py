@@ -11,5 +11,6 @@ def heap_permute(data_set,n):
 				data_set[i],data_set[n]=data_set[n],data_set[i]#交换元素i与n的位置
 				#heap_permute(data_set,n-1)
 if __name__=='__main__':
-	data=[0,1,2]
-	heap_permute(data,2)
+	input_num=int(input("num need permute>"))
+	data=[i for i in range(input_num+1)]
+	heap_permute(data,input_num)
