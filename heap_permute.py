@@ -8,8 +8,10 @@ def heap_permute(data_set,n):
 			heap_permute(data_set,n-1)
 			if n%2==1:
 				data_set[1],data_set[n]=data_set[n],data_set[1]#交换元素1与n的位置
+				print("n,data after exchange",n,data_set)
 			else:
 				data_set[i],data_set[n]=data_set[n],data_set[i]#交换元素i与n的位置
+				print("n,data after exchange",n,data_set)
 				#heap_permute(data_set,n-1)
 if __name__=='__main__':
 	input_num=int(input("num need permute>"))
