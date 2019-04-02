@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 def binominal_calc(n,k):
-	bin_list=[[0 for i in range(k+1)] for j in range(n+1)]
+	bin_list=[[0 for i in range(k+1)] for j in range(n+1)]#生成二维数组的列表生成方法
 	for i in range(n+1):#从0遍历至n
 		for j in range(k+1):#从0遍历至k
 			if j==0 or j==i:
