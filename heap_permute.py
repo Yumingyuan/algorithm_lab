@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 def heap_permute(data_set,n):
+	print("heap's:",n)
 	if n==1:
 		print(data_set[1:])#切片
 	else:
