@@ -6,9 +6,9 @@ def joseph(people_list,m,n):
 		#index-=1
 		print("kill:",people_list[index])
 		#print("before kill index",index)
-		del people_list[index]
+		del people_list[index]#将当前的索引对应的元素删除
 		#print("after kill index",index)
-	print("Survive:",people_list)
+	print("Survive:",people_list)#最后剩下一项，输出活着
 #def joseph_iter(people_list,next_people,m,n):
 	#alive=m
 	#index=-1
