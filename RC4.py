@@ -29,8 +29,8 @@ def rc4_encrypt(sbox_list,encrypt_data):
 	j=0
 	crypt_result=""
 	for character in encrypt_data:#对于字符串中的每一个字符
-		i=(i+1)%256
-		j=(j+sbox_list[i])%256
+		i=(i+1)%256#找到需要交换位置的索引
+		j=(j+sbox_list[i])%256#找到需要交换位置的索引
 		sbox_list[i],sbox_list[j]=sbox_list[j],sbox_list[i]#换位
 		xor_index=(sbox_list[i]+sbox_list[j])%256#计算需要参与xor的元素索引
 		crypt_result+=chr(sbox_list[xor_index]^ord(character))#字符串累加，将ascii码xor后的数转为字符累加
