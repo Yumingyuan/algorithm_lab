@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 def divide(data,left,right):
-	if (right-left)<=1:#只有两个或一个元素的情况
+	if (right-left)==0:#只有一个元素的情况
+		return left
+	if (right-left)==1:#只有两个元素的情况
 		if data[left]<data[right]:
 			return left
 		else:
