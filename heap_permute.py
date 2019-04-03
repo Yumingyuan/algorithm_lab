@@ -4,7 +4,7 @@ def heap_permute(data_set,n):
 	if n==1:
 		print(data_set[1:])#切片
 	else:
-		for i in range(1,n+1):#从1到n
+		for i in range(1,n+1):#从1到n遍历所有需要全排列的数
 			heap_permute(data_set,n-1)
 			if n%2==1:
 				data_set[1],data_set[n]=data_set[n],data_set[1]#交换元素1与n的位置
