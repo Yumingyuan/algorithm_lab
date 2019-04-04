@@ -11,9 +11,9 @@ def min_max_method1(search_data):#穷举搜索
 		if search_data[i]<temp_min:
 			temp_min=search_data[i]
 	return temp_max,temp_min
-def min_max_method2(search_data,low,high):
+def min_max_method2(search_data,low,high):#分治法进行搜索
 	#the situation of only two number
-	if high-low<=1:
+	if high-low<=1:#当只有1个或2个元素时
 		if search_data[low]<search_data[high]:
 			return (search_data[high],search_data[low])
 		else:
