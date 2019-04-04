@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 def joseph(people_list,m,n):
 	index=0
-	for i in range(m-1):#找到m-1项，进行kill
+	for i in range(m-1):#找到m-2项，进行kill
 		index=(index+n-1)%len(people_list)#报数
 		#index-=1
 		print("kill:",people_list[index])
