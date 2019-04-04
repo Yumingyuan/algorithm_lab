@@ -7,4 +7,4 @@ def joseph(n):
 	else:
 		return 2*joseph((n-1)/2)+1
 if __name__=="__main__":
-	print("alive",joseph(4))
+	print("alive",joseph(5))
