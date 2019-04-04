@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 import random
 import time
-def min_max_method1(search_data):
+def min_max_method1(search_data):#穷举搜索
 	length=len(search_data)
 	temp_max=search_data[1]
 	temp_min=search_data[1]
-	for i in range(2,length):
+	for i in range(2,length):#从第二个元素进行对比
 		if search_data[i]>temp_max:
 			temp_max=search_data[i]
 		if search_data[i]<temp_min:
