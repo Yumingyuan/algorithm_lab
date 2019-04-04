@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 '''
-初始化Sbox：sbox_vector
-密钥处理，循环填入：key_vector
-return:sbox_vector
+	初始化Sbox：sbox_vector
+	密钥处理，循环填入：key_vector
+	return:sbox_vector
 '''
 def initial_permutation(key):
 	j=0
@@ -13,16 +13,16 @@ def initial_permutation(key):
 	for i in range(0,256):
 		key_vector.append(key[i%len(key)])#循环填充密钥形成密钥向量空间
 	for i in range(0,256):
-		#print("key",int(ord(key_vector[i])))
-		#将字符转为ascii码(可能也可以理解为一个映射表，将字母或数字映射到一个数)
+	#print("key",int(ord(key_vector[i])))
+	#将字符转为ascii码(可能也可以理解为一个映射表，将字母或数字映射到一个数)
 		j=(j+sbox_vector[i]+int(ord(key_vector[i])))%256
 		sbox_vector[i],sbox_vector[j]=sbox_vector[j],sbox_vector[i]#[i]与[j]交换位置
 	return sbox_vector#返回的sbox
 '''
-Sbox：sbox_list
-xor加密数据：encrypt_data
-return:crypt_result
-加密函数与解密函数一致都是rc4_encrypt
+	Sbox：sbox_list
+	xor加密数据：encrypt_data
+	return:crypt_result
+	加密函数与解密函数一致都是rc4_encrypt
 '''
 def rc4_encrypt(sbox_list,encrypt_data):
 	i=0
@@ -34,7 +34,7 @@ def rc4_encrypt(sbox_list,encrypt_data):
 		sbox_list[i],sbox_list[j]=sbox_list[j],sbox_list[i]#换位
 		xor_index=(sbox_list[i]+sbox_list[j])%256#计算需要参与xor的元素索引
 		crypt_result+=chr(sbox_list[xor_index]^ord(character))#字符串累加，将ascii码xor后的数转为字符累加
-	return crypt_result		
+	return crypt_result
 if __name__=="__main__":
 	input_key=str(input("input string key>"))#输入密钥
 	input_encrypt_data=str(input("input data need encrypt>"))#输入待加密数据
