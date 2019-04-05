@@ -27,8 +27,8 @@ for i in range(len(map_data_list)-2,-1,-1):#i从8遍历到0
 	path_list[i]=min_node#通过j节点，使得i到最后的节点距离最短
 	#print("i,j",i,j,cost_list,path_list)	
 print("从0点出发到9号节点距离:",cost_list[0])
-print("path:",0)
+print("path:",0)#起始节点一定为0节点
 i=path_list[0]
 while i!=0:
 	print("path:",i)
-	i=path_list[i]
+	i=path_list[i]#寻找下一个节点
