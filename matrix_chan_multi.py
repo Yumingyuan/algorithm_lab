@@ -11,9 +11,16 @@ def matrix_chain_order():
 				if matrix_value[j][k]+matrix_value[k+1][i]+chain[j]*chain[k+1]*chain[i+1]<matrix_value[j][i]:
 					matrix_value[j][i]=matrix_value[j][k]+matrix_value[k+1][i]+chain[j]*chain[k+1]*chain[i+1]
 					matrix_solution[j][i]=k#最优断开位置
-def print_solution():
-	pass
+def print_solution(i,j):
+	if i==j:#索引到单个矩阵时，直接打印
+		print("A"+str(i),end='')#end参数保证打印不会进行\n
+	else:
+		print("(",end='')
+		print_solution(i,matrix_solution[i][j])#从0到分割矩阵0-最后一个矩阵的分割矩阵处
+		print_solution(matrix_solution[i][j]+1,j)#从分割矩阵的下一个矩阵进行打印，知道最后一个矩阵
+		print(")",end='')
 if __name__=="__main__":
 	matrix_chain_order()
-	print("cost:",matrix_value[0][matrix_num-1])#打印总耗费
+	print("cost:",matrix_value[0][matrix_num-1])#打印0到num-1总耗费
 	print(matrix_solution)
+	print_solution(0,5)
