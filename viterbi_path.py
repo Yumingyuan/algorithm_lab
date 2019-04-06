@@ -13,8 +13,8 @@ map_data_list=[
 [65535,65535,65535,65535,65535,65535,65535,65535,65535,65535]#9号节点
 ]
 #从i节点出发到终点的最短距离
-cost_list=[0 for i in range(len(map_data_list))]
-path_list=[0 for i in range(len(map_data_list))]
+cost_list=[0 for i in range(len(map_data_list))]#列表生成式，存储到结尾节点距离的最短cost
+path_list=[0 for i in range(len(map_data_list))]#记录路径
 for i in range(len(map_data_list)-2,-1,-1):#i从8遍历到0
 	min_cost=65535
 	for j in range(len(map_data_list)-1,i,-1):#j从9遍历到i+1
