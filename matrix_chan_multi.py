@@ -23,4 +23,4 @@ if __name__=="__main__":
 	matrix_chain_order()
 	print("cost:",matrix_value[0][matrix_num-1])#打印0到num-1总耗费
 	print(matrix_solution)
-	print_solution(0,matrix_num-1)
+	print_solution(0,matrix_num-1)#从0-5共6个矩阵相乘的结果
