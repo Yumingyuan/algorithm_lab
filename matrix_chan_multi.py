@@ -15,5 +15,5 @@ def print_solution():
 	pass
 if __name__=="__main__":
 	matrix_chain_order()
-	print(matrix_value)
+	print("cost:",matrix_value[0][matrix_num-1])#打印总耗费
 	print(matrix_solution)
