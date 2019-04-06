@@ -10,7 +10,9 @@ def matrix_chain_order():
 			for k in range(j,i):#选择在哪里断开括号
 				if matrix_value[j][k]+matrix_value[k+1][i]+chain[j]*chain[k+1]*chain[i+1]<matrix_value[j][i]:
 					matrix_value[j][i]=matrix_value[j][k]+matrix_value[k+1][i]+chain[j]*chain[k+1]*chain[i+1]
-					matrix_solution[j][i]=k
+					matrix_solution[j][i]=k#最优断开位置
+def print_solution():
+	pass
 if __name__=="__main__":
 	matrix_chain_order()
 	print(matrix_value)
