@@ -15,10 +15,10 @@ def print_solution(i,j):#从i打印到j
 	if i==j:#索引到单个矩阵时，直接打印
 		print("A"+str(i),end='')#end参数保证print不会换行
 	else:
-		print("(",end='')
+		print("(",end='')#左括号
 		print_solution(i,matrix_solution[i][j])#从0到分割矩阵0-最后一个矩阵的分割矩阵处
 		print_solution(matrix_solution[i][j]+1,j)#从分割矩阵的下一个矩阵进行打印，知道最后一个矩阵
-		print(")",end='')
+		print(")",end='')#右括号
 if __name__=="__main__":
 	matrix_chain_order()
 	print("cost:",matrix_value[0][matrix_num-1])#打印0到num-1总耗费
