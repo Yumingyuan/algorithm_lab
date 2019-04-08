@@ -17,7 +17,7 @@ def print_result(node_list):#打印最短路径函数
 	print("经过节点:",end='')
 	for i in range(len(node_list)):
 		print(map_from_num_to_letter[node_list[i]],end='')
-		if i!=len(node_list)-1:
+		if i!=len(node_list)-1:#最后一次不打印逗号
 			print(",",end='')
 if __name__=="__main__":
 	chosen_node=0
