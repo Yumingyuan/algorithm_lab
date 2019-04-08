@@ -34,7 +34,7 @@ if __name__=="__main__":
 				chosen_node=j
 		selected[chosen_node]=True#将局部最近的点放入选中节点集合
 		node_list.append(chosen_node)
-		for j in range(1,len(map_data_list)):
+		for j in range(1,len(map_data_list)):#遍历找到所有节点j，通过chosen_node疏通集合内到所有节点的最近距离
 			if min_length[j]>min_length[chosen_node]+map_data_list[chosen_node][j]:
 				min_length[j]=min_length[chosen_node]+map_data_list[chosen_node][j]#更新到原点的最短距离
 	print("min length:",min_length[len(min_length)-1])
