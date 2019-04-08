@@ -38,4 +38,4 @@ if __name__=="__main__":
 			if min_length[j]>min_length[chosen_node]+map_data_list[chosen_node][j]:
 				min_length[j]=min_length[chosen_node]+map_data_list[chosen_node][j]#更新到原点的最短距离
 	print("min length:",min_length[len(min_length)-1])
-	print_result(node_list)
+	print_result(node_list)#调用打印经过节点的函数
