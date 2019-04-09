@@ -28,7 +28,7 @@ if __name__=="__main__":
 	for i in range(0,len(map_data_list[0])):
 		min_length[i]=min(min_length[i],map_data_list[0][i])#把0节点到外部节点的距离初始化一下
 	for i in range(1,len(map_data_list)):#到最后一个节点(进行n-1次的局部dijkstra计算)
-		most_min_value=65535
+		most_min_value=65535#由于还未进行松弛，所以设置为无穷大值
 		for j in range(1,len(map_data_list)):#从地一个到最后一个节点
 			if not selected[j] and min_length[j]<most_min_value:#没有被选择，且节点可达
 				most_min_value=min_length[j]#局部最近的点和已选中节点集合的距离
