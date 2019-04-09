@@ -7,4 +7,4 @@ def joseph(n):
 	else:#奇数情况
 		return 2*joseph((n-1)/2)+1
 if __name__=="__main__":
-	print("alive",joseph(5))
+	print("alive:",joseph(5))#函数调用
