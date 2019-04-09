@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 def joseph(n):
-	if n==1:
+	if n==1:#仅剩1人
 		return 1
 	elif n%2==0:#偶数情况
 		return 2*joseph(n/2)-1
