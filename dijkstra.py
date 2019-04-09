@@ -21,7 +21,7 @@ def print_result(node_list):#打印最短路径函数
 		if i!=len(node_list)-1:#最后一次不打印逗号
 			print(",",end='')
 if __name__=="__main__":
-	chosen_node=0
+	chosen_node=0#通常选择从0节点出发
 	node_list=[chosen_node]#记录经过节点0
 	min_length[chosen_node]=chosen_node#设置初始节点0
 	selected[chosen_node]=True#节点0被选中
