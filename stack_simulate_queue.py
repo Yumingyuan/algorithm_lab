@@ -10,7 +10,7 @@ def delete_head(stack1,stack2):
 	head_num=stack2.pop()
 	print("headnum:",head_num)
 if __name__=="__main__":
-	stack1=["a","b","c","d"]
+	stack1=["a","b","c","d"]#栈元素
 	stack2=[]
 	delete_head(stack1,stack2)#模拟队列操作
 	delete_head(stack1,stack2)
