@@ -22,9 +22,9 @@ def print_result(node_list):#打印最短路径函数
 			print(",",end='')
 if __name__=="__main__":
 	chosen_node=0
-	node_list=[chosen_node]#记录经过节点
-	min_length[chosen_node]=chosen_node#设置初始节点
-	selected[chosen_node]=True#节点被选中
+	node_list=[chosen_node]#记录经过节点0
+	min_length[chosen_node]=chosen_node#设置初始节点0
+	selected[chosen_node]=True#节点0被选中
 	for i in range(0,len(map_data_list[0])):
 		min_length[i]=min(min_length[i],map_data_list[0][i])#把0节点到外部节点的距离初始化一下
 	for i in range(1,len(map_data_list)):#到最后一个节点(进行n-1次的局部dijkstra计算)
