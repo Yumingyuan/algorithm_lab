@@ -8,7 +8,7 @@ def delete_head(stack1,stack2):
 	if len(stack2)==0:#stack2栈内没东西
 		print("Error! stack2 is empty")
 		return
-	head_num=stack2.pop()
+	head_num=stack2.pop()#取出stack2中最后入栈的元素
 	print("headnum:",head_num)
 if __name__=="__main__":
 	stack1=["a","b","c","d"]#栈元素
