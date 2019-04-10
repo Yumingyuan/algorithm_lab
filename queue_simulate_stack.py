@@ -5,6 +5,8 @@ def insertinqueue(queue1,queue2,item):#确保只有一个队列中有元素
 	else:#反之queue2为空，则往queue1的队尾加入东西
 		queue1.append(item)
 def delete_tail(queue1,queue2):
+	if len(queue1)==0 and len(queue2)==0:#当栈为空
+		return
 	#当队列1中无元素时将queue2中的元素从队首移除len(queue2)-1个，并输出queue2中的剩下的元素
 	if len(queue1)==0:
 		while len(queue2)!=1:
@@ -33,3 +35,4 @@ if __name__=="__main__":
 	delete_tail(queue1,queue2)
 	delete_tail(queue1,queue2)
 	delete_tail(queue1,queue2)
+	delete_tail(queue1,queue2)#此时栈为空，无效
