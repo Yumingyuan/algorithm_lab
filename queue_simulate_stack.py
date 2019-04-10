@@ -33,6 +33,6 @@ if __name__=="__main__":
 	insertinqueue(queue1,queue2,"g")
 	insertinqueue(queue1,queue2,"h")
 	delete_tail(queue1,queue2)
-	delete_tail(queue1,queue2)
-	delete_tail(queue1,queue2)
+	delete_tail(queue1,queue2)#正常弹出
+	delete_tail(queue1,queue2)#正常弹出
 	delete_tail(queue1,queue2)#此时栈为空，无效
