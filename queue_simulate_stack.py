@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
-def insertinqueue(queue1,queue2,item):#确保只有一个队列中有元素
-	if len(queue1)==0:#当queue1为空，则往queue2的队尾加入东西
+#插入函数insertinqueue确保只有一个队列中有元素
+def insertinqueue(queue1,queue2,item):
+	#当queue1为空，则往queue2的队尾加入东西
+	if len(queue1)==0:
+		#加入新加入元素
 		queue2.append(item)
 	else:#反之queue2为空，则往queue1的队尾加入东西
 		queue1.append(item)
+#删除队尾元素函数delete_tail，把非空队列的0-(len-1)元素放入空队列
 def delete_tail(queue1,queue2):
 	if len(queue1)==0 and len(queue2)==0:#当栈为空
 		return
