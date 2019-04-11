@@ -16,13 +16,13 @@ def delete_tail(queue1,queue2):
 		while len(queue2)!=1:
 			data=queue2.pop(0)#获得队首元素
 			queue1.append(data)
-		print("item pop",queue2.pop(0))
+		print("item pop",queue2.pop(0))#将移除len-1个队首元素的queue2中剩下的元素输出
 	#当队列2中无元素时将queue1中的元素从队首移除len(queue1)-1个，并输出queue1中的剩下的元素
 	elif len(queue2)==0:
 		while len(queue1)!=1:
 			data=queue1.pop(0)#获得队首元素
 			queue2.append(data)
-		print("item pop",queue1.pop(0))#输出队首元素
+		print("item pop",queue1.pop(0))#将移除len-1个队首元素的queue1中剩下的元素输出
 	else:
 		pass
 if __name__=="__main__":
