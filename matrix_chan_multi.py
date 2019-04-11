@@ -7,7 +7,7 @@ def matrix_chain_order():
 	for i in range(1,matrix_num):#i负责取出每一个矩阵的列数
 		for j in range(i-1,-1,-1):#j负责取出每一个矩阵的行数
 			matrix_value[j][i]=65535#大值
-			for k in range(j,i):#选择在哪里断开括号
+			for k in range(j,i):#选择在哪里断开括号j<=k<i
 				if matrix_value[j][k]+matrix_value[k+1][i]+chain[j]*chain[k+1]*chain[i+1]<matrix_value[j][i]:
 					matrix_value[j][i]=matrix_value[j][k]+matrix_value[k+1][i]+chain[j]*chain[k+1]*chain[i+1]
 					matrix_solution[j][i]=k#最优断开位置
