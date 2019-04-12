@@ -4,7 +4,8 @@ matrix_num=len(chain)-1#共几个矩阵参与相乘
 matrix_value=[[0 for i in range(matrix_num)] for j in range(matrix_num)]#生成n*n的矩阵保存相乘次数
 matrix_solution=[[0 for i in range(matrix_num)] for j in range(matrix_num)]#生成n*n的矩阵保存加括号位置
 def matrix_chain_order():
-	for i in range(1,matrix_num):#i负责取出每一个矩阵的列数
+	#当i=1，j=0,k从0-1
+	for i in range(1,matrix_num):#i负责关注的是运算规模，第一轮是计算2个矩阵连乘的状态
 		for j in range(i-1,-1,-1):#j负责取出每一个矩阵的行数
 			matrix_value[j][i]=65535#大值
 			for k in range(j,i):#选择在哪里断开括号j<=k<i
