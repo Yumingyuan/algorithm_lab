@@ -4,9 +4,9 @@ def insertinqueue(queue1,queue2,item):
 	#当queue1为空，则往queue2的队尾加入东西
 	if len(queue1)==0:
 		#加入新加入元素
-		queue2.append(item)
+		queue2.append(item)#item相当于栈顶元素
 	else:#反之queue2为空，则往queue1的队尾加入东西
-		queue1.append(item)
+		queue1.append(item)#item相当于栈顶元素
 #删除队尾元素函数delete_tail，把非空队列的0-(len-1)元素放入空队列
 def delete_tail(queue1,queue2):
 	if len(queue1)==0 and len(queue2)==0:#当栈为空
