@@ -28,6 +28,7 @@ def delete_tail(queue1,queue2):
 if __name__=="__main__":
 	queue1=["a","b","c","d","e"]
 	queue2=[]
+	#删除尾部节点函数调用
 	delete_tail(queue1,queue2)
 	insertinqueue(queue1,queue2,"f")
 	delete_tail(queue1,queue2)
