@@ -27,6 +27,7 @@ def john_calc(job_nums,jobs):
 	#倒序输出jobs_b
 	for i in range(len(jobs_b)-1,-1,-1):
 		print(jobs_b[i][0],end='')
+		#最后一项不需要输出逗号
 		if i!=0:
 			print(",",end='')
 if __name__=="__main__":
