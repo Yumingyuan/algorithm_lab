@@ -33,4 +33,5 @@ def john_calc(job_nums,jobs):
 if __name__=="__main__":
 	#工作列表，第一个是作业编号，第二个是在A上的生产时间，第三个是在B上的生产时间
 	jobs=[(1,2,5),(2,4,2),(3,3,3),(4,6,1),(5,1,7)]
+	#算法调用
 	john_calc(len(jobs),jobs)
