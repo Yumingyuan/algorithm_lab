@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 import random
 range_upper=20
 length=10
-list_unsort=random.sample(range(range_upper),length)
+list_unsort=random.sample(range(range_upper),length)#生成随机数据集合
 print('Before sort:',list_unsort)
 
 gap=1
