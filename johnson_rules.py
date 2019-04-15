@@ -19,8 +19,12 @@ def john_calc(job_nums,jobs,seq):
 	jobs_a.sort(key=takefirst)
 	#jobs_b按在B上工作时间增长的顺序排序
 	jobs_b.sort(key=takesecond)
+	print("jobs sequence:",end='')
+	#正序输出jobs_a
 	for i in range(len(jobs_a)):
 		print(jobs_a[i][0],end='')
+		print(",",end='')
+	#倒序输出jobs_a
 	for i in range(len(jobs_b)-1,-1,-1):
 		print(jobs_b[i][0],end='')
 if __name__=="__main__":
