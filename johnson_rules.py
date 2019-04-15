@@ -24,9 +24,11 @@ def john_calc(job_nums,jobs):
 	for i in range(len(jobs_a)):
 		print(jobs_a[i][0],end='')
 		print(",",end='')
-	#倒序输出jobs_a
+	#倒序输出jobs_b
 	for i in range(len(jobs_b)-1,-1,-1):
 		print(jobs_b[i][0],end='')
+		if i!=0:
+			print(",",end='')
 if __name__=="__main__":
 	jobs=[(1,2,5),(2,4,2),(3,3,3),(4,6,1),(5,1,7)]#工作列表
 	john_calc(len(jobs),jobs)
