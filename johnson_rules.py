@@ -3,7 +3,7 @@ def takefirst(elem):
 	return elem[1]#返回在A上的执行时间		
 def takesecond(elem):
 	return elem[2]#返回在B上的执行时间
-def john_calc(job_nums,jobs,seq):
+def john_calc(job_nums,jobs):
 	jobs_a=[]
 	jobs_b=[]
 	for i in range(job_nums):
@@ -29,5 +29,4 @@ def john_calc(job_nums,jobs,seq):
 		print(jobs_b[i][0],end='')
 if __name__=="__main__":
 	jobs=[(1,2,5),(2,4,2),(3,3,3),(4,6,1),(5,1,7)]#工作列表
-	sequence=[0 for i in range(len(jobs))]
-	john_calc(len(jobs),jobs,sequence)
+	john_calc(len(jobs),jobs)
