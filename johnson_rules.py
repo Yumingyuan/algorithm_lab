@@ -24,7 +24,7 @@ def john_calc(job_nums,jobs):
 	for i in range(len(jobs_a)):
 		print(jobs_a[i][0],end='')
 		print(",",end='')
-	#倒序输出jobs_b
+	#倒序输出jobs_b，从len-1到0位置
 	for i in range(len(jobs_b)-1,-1,-1):
 		print(jobs_b[i][0],end='')
 		#最后一项不需要输出逗号
