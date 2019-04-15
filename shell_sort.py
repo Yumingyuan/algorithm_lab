@@ -16,6 +16,7 @@ while gap>=1:
 		temp=list_unsort[j]#获取当前比较位置j的元素下标值
 		print("current compare num:",temp)
 		while j>=gap and list_unsort[j]<list_unsort[j-gap]:#把当前j与j-gap进行比较
+			#其实还是插入排序的原理
 			list_unsort[j]=list_unsort[j-gap]
 			list_unsort[j-gap]=temp
 			j=j-gap
