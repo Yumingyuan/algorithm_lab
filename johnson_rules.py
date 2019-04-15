@@ -3,6 +3,20 @@ def takefirst(elem):
 	return elem[1]#返回在A上的执行时间		
 def takesecond(elem):
 	return elem[2]#返回在B上的执行时间
+def calc_jobs_cost(jobs_a,jobs_b):
+	total_cost=0
+	temp_calc=0
+	for i in range(len(jobs_a)):
+		temp_calc+=jobs_a[i][1]
+		if temp_calc>total_cost:
+			total_cost=temp_calc
+		total_cost+=jobs_a[i][2]
+	for j in range(len(jobs_b)):
+		temp_calc+=jobs_b[i][1]
+		if temp_calc>total_cost:
+			total_cost=temp_calc
+		total_cost+=jobs_b[i][2]
+	print("cost:",total_cost)
 def john_calc(job_nums,jobs):
 	jobs_a=[]
 	jobs_b=[]
@@ -31,6 +45,8 @@ def john_calc(job_nums,jobs):
 		print(jobs_b[i][0],end='')
 		if i!=len(jobs_b)-1:
 			print(",",end='')
+	print("\n")
+	calc_jobs_cost(jobs_a,jobs_b)#调用计算花费函数
 if __name__=="__main__":
 	#工作列表，第一个是作业编号，第二个是在A上的生产时间，第三个是在B上的生产时间
 	jobs=[(1,2,5),(2,4,2),(3,3,3),(4,6,1),(5,1,7)]
