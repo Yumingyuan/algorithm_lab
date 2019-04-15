@@ -19,16 +19,17 @@ def john_calc(job_nums,jobs):
 	jobs_a.sort(key=takefirst)
 	#jobs_b按在B上工作时间增长的顺序排序
 	jobs_b.sort(key=takesecond)
+	#将jobs_b元素列表反转，方便正向输出
+	jobs_b.reverse()
 	print("jobs sequence:",end='')
 	#正序输出jobs_a
 	for i in range(len(jobs_a)):
 		print(jobs_a[i][0],end='')
 		print(",",end='')
-	#倒序输出jobs_b，从len-1到0位置
-	for i in range(len(jobs_b)-1,-1,-1):
+	#正序输出jobs_b
+	for i in range(len(jobs_b)):
 		print(jobs_b[i][0],end='')
-		#最后一项不需要输出逗号
-		if i!=0:
+		if i!=len(jobs_b)-1:
 			print(",",end='')
 if __name__=="__main__":
 	#工作列表，第一个是作业编号，第二个是在A上的生产时间，第三个是在B上的生产时间
