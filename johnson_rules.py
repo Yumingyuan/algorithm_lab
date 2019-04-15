@@ -11,7 +11,7 @@ def calc_jobs_cost(jobs_a,jobs_b):
 		if temp_calc>total_cost:
 			total_cost=temp_calc
 		total_cost+=jobs_a[i][2]
-	for j in range(len(jobs_b)):
+	for i in range(len(jobs_b)):
 		temp_calc+=jobs_b[i][1]
 		if temp_calc>total_cost:
 			total_cost=temp_calc
@@ -45,10 +45,10 @@ def john_calc(job_nums,jobs):
 		print(jobs_b[i][0],end='')
 		if i!=len(jobs_b)-1:
 			print(",",end='')
-	print("\n")
+	print("")#换行
 	calc_jobs_cost(jobs_a,jobs_b)#调用计算花费函数
 if __name__=="__main__":
 	#工作列表，第一个是作业编号，第二个是在A上的生产时间，第三个是在B上的生产时间
-	jobs=[(1,2,5),(2,4,2),(3,3,3),(4,6,1),(5,1,7)]
+	jobs=[(1,2,5),(2,4,2),(3,3,3),(4,9,1),(5,1,7)]
 	#算法调用
 	john_calc(len(jobs),jobs)
