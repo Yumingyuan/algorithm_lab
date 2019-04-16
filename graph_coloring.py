@@ -9,7 +9,7 @@ def iscollision(node_set,node_color,i,color):
 			return True
 	return False#没找到合适的j就没有颜色冲突
 def colorify(n):
-	node_set=[0 for i in range(n)]
+	#node_set=[0 for i in range(n)]
 	node_color=[0 for i in range(n)]#着色的向量
 	color=1#初始颜色
 	for i in range(node_num):#固定一个节点
