@@ -14,7 +14,7 @@ def colorify(n):
 	color=1#初始颜色
 	for i in range(node_num):#固定一个节点
 		for j in range(1,color+1):#遍历颜色
-			print("color can use:",color)
+			print("color can use:",color,j)
 			if not iscollision(node_matrix,node_color,i,j):
 				node_color[i]=j#着色
 				if i==node_num-1:
