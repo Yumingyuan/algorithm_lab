@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 node_num=5
+#临接情况列表
 node_matrix=[[False,True,True,True,False],[True,False,True,True,True],
 [True,True,False,True,False],[True,True,True,False,True],[False,True,False,True,False]]
 def iscollision(node_set,node_color,i,color):
