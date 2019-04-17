@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 node_num=5
+#node_num=4
 #临接情况列表
 node_matrix=[[False,True,True,True,False],[True,False,True,True,True],
 [True,True,False,True,False],[True,True,True,False,True],[False,True,False,True,False]]
+#node_matrix=[[False,True,False,False],[True,False,True,True],[False,True,False,True],
+[False,True,True,False]]
 def iscollision(node_set,node_color,i,color):
 	for j in range(i):#遍历已经着色的节点
 		if node_set[i][j]==True and node_color[j]==color:#如果有一个j与i临接且着色一样，则不行！
