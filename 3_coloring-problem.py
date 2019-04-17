@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-#临接矩阵,例子中是一个4种颜色可涂抹的情况
-node_matrix=[[False,True,True,True,False],[True,False,True,True,True],
-[True,True,False,True,False],[True,True,True,False,True],[False,True,False,True,False]]
+#临接矩阵,例子中是一个3种颜色可涂抹的情况
+node_matrix=[[False,True,False,False],[True,False,True,True],[False,True,False,True],
+[False,True,True,False]]
+#node_matrix=[[False,True,True,True,False],[True,False,True,True,True],
+#[True,True,False,True,False],[True,True,True,False,True],[False,True,False,True,False]]
 #初始化填色列表,颜色为0
 node_color=[0 for i in range(len(node_matrix))]
 def iscollision(node_set,node_color,i,color):
@@ -13,7 +15,7 @@ def graphcolor(procedure):
 	if procedure==len(node_matrix):
 		print("resolution:",node_color)
 	else:
-		for color in range(1,5):#4着色
+		for color in range(1,4):#3着色
 			node_color[procedure]=color
 			if not iscollision(node_matrix,node_color,procedure,color):
 				graphcolor(procedure+1)
