@@ -13,16 +13,26 @@ def colorify(n):
 	node_color=[0 for i in range(n)]#着色的向量
 	color=1#初始颜色
 	for i in range(node_num):#固定一个节点
-		for j in range(1,color+1):#遍历颜色
+		j=0
+		while j<=color:
+			j+=1
 			if not iscollision(node_matrix,node_color,i,j):
+				print("not collision",j)
 				node_color[i]=j#着色
+				#print("if",node_color)
 				if i==node_num-1:
 					print("node_color:",node_color)
+					break
+				break#跳出内层循环
 			else:
+				j+=1
 				color+=1
-				node_color[i]=color
+				node_color[i]=color			
+				#print("else:",node_color)
 				if i==node_num-1:
-					print("node_color:",node_color)
+					print("node_color:",node_color)	
+					break
+				break#跳出内层循环
 	print("need",color,"num")
 if __name__=="__main__":
 	colorify(node_num)
