@@ -19,4 +19,4 @@ def graphcolor(procedure):
 				graphcolor(procedure+1)
 if __name__=="__main__":
 	graphcolor(0)
-	
+	print("finish graph is no resolution,there is no solution!")
