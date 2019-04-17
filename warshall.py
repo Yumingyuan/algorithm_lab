@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+def printmatrix(matrix):
+	for matrix_row in range(len(matrix)):
+		print(matrix[matrix_row])
 def warshall_calc(matrix):
 	for release_node_num in range(len(matrix)):
 		for start_node_num in range(len(matrix)):
@@ -10,7 +13,8 @@ def warshall_calc(matrix):
 					matrix[start_node_num][end_node_num]=True
 				else:
 					pass
-		print(matrix)
+		print("matrix:",release_node_num+1)
+		printmatrix(matrix)
 if __name__=="__main__":
 	data_matrix_A=[[False,True,False,False],
 											[False,False,False,True],
