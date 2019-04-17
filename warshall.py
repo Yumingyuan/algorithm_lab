@@ -11,7 +11,7 @@ def warshall_calc(matrix):
 				#当当前的中间节点能够连接startnode和endnode时，设置为true
 				elif matrix[start_node_num][release_node_num]==True and matrix[release_node_num][end_node_num]==True:
 					matrix[start_node_num][end_node_num]=True
-				else:
+				else:#其他情况直接跳过
 					pass
 		print("matrix:",release_node_num+1)
 		printmatrix(matrix)
