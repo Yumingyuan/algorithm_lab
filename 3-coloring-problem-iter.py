@@ -12,7 +12,7 @@ if __name__=="__main__":
 	k=0
 	while k>=0:
 		while node_color[k]<=2:
-			node_color[k]+=1#选择颜色
+			node_color[k]+=1#选择颜色，有1,2,3可选
 			if not iscollision(node_matrix,node_color,k,node_color[k]):
 				if k==len(node_matrix)-1:#是个解
 					print(node_color)
