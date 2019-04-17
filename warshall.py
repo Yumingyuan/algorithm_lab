@@ -20,4 +20,6 @@ if __name__=="__main__":
 											[False,False,False,True],
 											[False,False,False,False],
 											[True,False,True,False]]
+	print("matrix:",0)
+	printmatrix(data_matrix_A)
 	warshall_calc(data_matrix_A)
