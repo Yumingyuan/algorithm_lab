@@ -10,10 +10,9 @@ def warshall_calc(matrix):
 				else:
 					pass
 		print(matrix)
-
 if __name__=="__main__":
 	data_matrix_A=[[False,True,False,False],
 											[False,False,False,True],
 											[False,False,False,False],
 											[True,False,True,False]]
-	
+	warshall_calc(data_matrix_A)
