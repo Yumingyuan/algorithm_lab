@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#临接矩阵
+#临接矩阵,例子中是一个4种颜色可涂抹的情况
 node_matrix=[[False,True,True,True,False],[True,False,True,True,True],
 [True,True,False,True,False],[True,True,True,False,True],[False,True,False,True,False]]
 #初始化填色列表,颜色为0
