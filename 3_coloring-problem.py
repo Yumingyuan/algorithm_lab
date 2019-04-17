@@ -13,8 +13,9 @@ def graphcolor(procedure):
 	if procedure==len(node_matrix):
 		print("resolution:",node_color)
 	else:
-		for i in range(1,4):
-			node_color[procedure]=i
-			
+		for color in range(1,5):
+			node_color[procedure]=color
+			if not iscollision(node_matrix,node_color,procedure,color):
+				graphcolor(procedure+1)
 if __name__=="__main__":
-	
+	graphcolor(0)
