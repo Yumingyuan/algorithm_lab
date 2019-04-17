@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#利用两个stack来模拟一个队列
+#利用两个栈(LIFO)来模拟一个队列(FIFO)
 def delete_head(stack1,stack2):
 	if len(stack2)<=0:
 		while len(stack1)>0:
