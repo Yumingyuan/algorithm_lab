@@ -20,7 +20,7 @@ def calc_optimal():
 					min_val=solution[i][k-1]+solution[k+1][j]#更新最优值
 					min_k=k
 			solution[i][j]=min_val#更新最优值
-			result[i-1][j]=min_k#更新最优断开位置k
+			result[i][j]=min_k#更新最优断开位置k
 			sum_prob=0
 			for index in range(i-1,j):#从i-1加到j-1
 				#print("add",probablity[index])
@@ -30,6 +30,7 @@ def calc_optimal():
 			solution[i][j]+=sum_prob
 	print(solution[1][len(probablity)])
 	print(result)
+	print_solution(0,len(probablity)-1)
 if __name__=="__main__":
 	initial()#调用初始化函数
 	calc_optimal()
