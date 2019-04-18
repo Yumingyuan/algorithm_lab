@@ -19,14 +19,17 @@ def calc_optimal():
 					#print("get in if:",solution[i][k-1],solution[k+1][j],k)
 					min_val=solution[i][k-1]+solution[k+1][j]#更新最优值
 					min_k=k
+			solution[i][j]=min_val#更新最优值
 			result[i][j]=min_k#更新最优断开位置k
-			sum_prob=probablity[i-1]
+			sum_prob=0
 			for index in range(i-1,j):#从i-1加到j-1
 				#print("add",probablity[index])
 				sum_prob+=probablity[index]
+			#print("After add ",sum_prob)
+			#print("soltion:",solution)
 			solution[i][j]+=sum_prob
 	print(solution)
-	print(result)
+	#print(result)
 if __name__=="__main__":
 	initial()#调用初始化函数
 	calc_optimal()
