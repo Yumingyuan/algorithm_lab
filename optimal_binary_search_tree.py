@@ -30,7 +30,6 @@ def calc_optimal():
 			solution[i][j]+=sum_prob
 	print(solution[1][len(probablity)])
 	print(result)
-	print_solution(0,len(probablity)-1)
 if __name__=="__main__":
 	initial()#调用初始化函数
 	calc_optimal()
