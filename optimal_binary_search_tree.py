@@ -14,15 +14,15 @@ def calc_optimal():
 		for i in range(1,len(probablity)-dimension+1):
 			j=i+dimension
 			min_val=65535
-			for k in range(i,j+1):
+			for k in range(i,j+1):#决定谁当父节点
 				if solution[i][k-1]+solution[k+1][j]<min_val:
-					print("get in if:",solution[i][k-1],solution[k+1][j],k)
+					#print("get in if:",solution[i][k-1],solution[k+1][j],k)
 					min_val=solution[i][k-1]+solution[k+1][j]#更新最优值
 					min_k=k
 			result[i][j]=min_k#更新最优断开位置k
 			sum_prob=probablity[i-1]
 			for index in range(i-1,j):#从i-1加到j-1
-				print("add",probablity[index])
+				#print("add",probablity[index])
 				sum_prob+=probablity[index]
 			solution[i][j]+=sum_prob
 	print(solution)
