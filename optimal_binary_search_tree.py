@@ -18,6 +18,6 @@ def calc_optimal():
 				if solution[i][k-1]+solution[k+1][j]<min_val:
 					min_val=solution[i][k-1]+solution[k+1][j]#更新最优值
 					min_k=k
-			result[i][j]=
+			result[i][j]=min_k#更新最优断开位置k
 if __name__=="__main__":
 	initial()#调用初始化函数
