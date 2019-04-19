@@ -3,6 +3,14 @@ probablity=[0.1,0.2,0.4,0.3]
 #生成节点个数+2行，节点个数+1列
 solution=[[0 for i in range(len(probablity)+1)] for j in range(len(probablity)+2)]
 result=[[0 for i in range(len(probablity)+1)] for j in range(len(probablity)+1)]
+def print_result(i,j):
+	if i==j:
+		print("node"+str(i),end='')
+	else:
+		print("(",end='')
+		print_result(i,result[i][i])
+		print_result(result[i][i]+1,j)
+		print(")",end='')
 #对solution进行初始化
 def initial():
 	for i in range(len(probablity)):
@@ -26,7 +34,8 @@ def calc_optimal():
 				sum_prob+=probablity[index]
 			solution[i][j]+=sum_prob
 	print(solution[1][len(probablity)])
-	#print_result(1,4)
+	print("result",result)
+	print_result(1,4)
 if __name__=="__main__":
 	initial()#调用初始化函数
 	calc_optimal()
