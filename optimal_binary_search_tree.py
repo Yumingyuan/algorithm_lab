@@ -7,6 +7,8 @@ result=[[0 for i in range(len(probablity)+1)] for j in range(len(probablity)+1)]
 def initial():
 	for i in range(len(probablity)):
 		solution[i+1][i+1]=probablity[i]#查找“i+1”这个点的单个概率
+		result[i+1][i+1]=i+1
+	print("After init",result)
 def calc_optimal():
 	min_k=0
 	for dimension in range(1,len(probablity)):
