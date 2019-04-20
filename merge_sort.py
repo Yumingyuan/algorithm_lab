@@ -3,7 +3,7 @@ def merge(need_sort_list):
 	after_sort=[]
 	print('Before sort:',need_sort_list)
 	length=len(need_sort_list)
-	if length%2==0:#如果是偶数个数据
+	if length%2==0:#如果是偶数个数
 		mid=int(length/2)
 	elif length%2==1:
 		mid=int(length/2)+1
