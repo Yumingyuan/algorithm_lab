@@ -13,7 +13,7 @@ def merge(need_sort_list):
 		if index1>mid-1:#当mid前的数据都放入待排数组后，直接把mid后的数据按顺序放入即可
 			after_sort.append(need_sort_list[index2])
 			index2=index2+1
-		elif index2>length-1:
+		elif index2>length-1:#当mid后的数据都放入待排数组后，直接把mid前的数据按顺序放入即可
 			after_sort.append(need_sort_list[index1])
 			index1=index1+1
 		elif need_sort_list[index1]<need_sort_list[index2]:
