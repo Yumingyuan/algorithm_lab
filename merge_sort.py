@@ -10,7 +10,7 @@ def merge(need_sort_list):
 	index1=0
 	index2=mid
 	for i in range(0,length):#遍历整个待排序数组
-		if index1>mid-1:
+		if index1>mid-1:#当mid前的数据都放入待排数组后，直接把mid后的数据按顺序放入即可
 			after_sort.append(need_sort_list[index2])
 			index2=index2+1
 		elif index2>length-1:
