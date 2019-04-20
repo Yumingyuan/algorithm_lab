@@ -9,7 +9,7 @@ def merge(need_sort_list):
 		mid=int(length/2)+1
 	index1=0
 	index2=mid
-	for i in range(0,length):
+	for i in range(0,length):#遍历整个待排序数组
 		if index1>mid-1:
 			after_sort.append(need_sort_list[index2])
 			index2=index2+1
