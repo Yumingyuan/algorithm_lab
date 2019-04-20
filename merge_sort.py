@@ -5,7 +5,7 @@ def merge(need_sort_list):
 	length=len(need_sort_list)
 	if length%2==0:#如果是偶数个数
 		mid=int(length/2)
-	elif length%2==1:
+	elif length%2==1:#奇数个排序数
 		mid=int(length/2)+1
 	index1=0
 	index2=mid
