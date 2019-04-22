@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 def QuickSort(search_data,low,high):
 	if high>low:
-		k=Partitions(search_data,low,high)
+		k=Partitions(search_data,low,high)#获取关键元素 被放置在数组中的什么位置
 		QuickSort(search_data,low,k-1)
 		QuickSort(search_data,k+1,high)
 def Partitions(search_data,low,high):
