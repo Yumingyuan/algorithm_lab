@@ -9,6 +9,7 @@ def Partitions(search_data,low,high):
 	left=low
 	right=high
 	reference=search_data[low]
+	#将reference放入[left,right]中的合适位置
 	while left<right:
 		while search_data[left]<=reference:
 			left=left+1
