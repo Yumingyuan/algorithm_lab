@@ -4,6 +4,7 @@ def QuickSort(search_data,low,high):
 		k=Partitions(search_data,low,high)#获取关键元素被放置在数组中的什么位置
 		QuickSort(search_data,low,k-1)#对0到k-1元素进行划分
 		QuickSort(search_data,k+1,high)#对k+1到length元素进行划分，找到合适位置
+#划分算法
 def Partitions(search_data,low,high):
 	left=low
 	right=high
