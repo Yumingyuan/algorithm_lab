@@ -8,6 +8,6 @@ def russia_multi(opt1,opt2):
 		opt2=opt2*2#每次将opt2变为原来的两倍
 	return result_sum
 if __name__=="__main__":
-	opt1=int(input("please input opt num 1:"))
-	opt2=int(input("please input opt num 2:"))
-	print("result:",russia_multi(opt1,opt2))
+	opt1=int(input("please input opt num 1:"))#输入参数1
+	opt2=int(input("please input opt num 2:"))#输入参数2
+	print("result:",russia_multi(opt1,opt2))#打印计算结果
