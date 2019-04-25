@@ -20,6 +20,6 @@ if __name__=="__main__":
 				if k==len(node_matrix)-1:#是个解
 					print(node_color)
 				else:
-					k+=1#继续对下一个节点查找
+					k+=1#继续对下一个节点进行上色操作
 		node_color[k]=0#重新选择
 		k-=1#回溯
