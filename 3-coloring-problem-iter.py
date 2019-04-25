@@ -4,6 +4,7 @@ node_matrix=[[False,True,False,False],[True,False,True,True],[False,True,False,T
 [False,True,True,False]]
 #生成颜色填充向量
 node_color=[0 for i in range(len(node_matrix))]
+#当前着色节点为i，判断是否和一个之前填过颜色且与i临接的节点颜色一致
 def iscollision(node_set,node_color,i,color):
 	for j in range(i):#遍历已经着色的节点
 		if node_set[i][j]==True and node_color[j]==color:#如果有一个j与i临接且着色一样，则不行！
