@@ -14,7 +14,7 @@ if __name__=="__main__":
 	k=0
 	#k控制回溯，当k遍历所有节点后，如果成功则为1个解
 	while k>=0:
-		while node_color[k]<=2:
+		while node_color[k]<=2:#可以加3次
 			node_color[k]+=1#选择颜色，有1,2,3可选
 			if not iscollision(node_matrix,node_color,k,node_color[k]):
 				if k==len(node_matrix)-1:#是个解
