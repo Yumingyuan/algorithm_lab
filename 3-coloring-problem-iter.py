@@ -12,7 +12,7 @@ def iscollision(node_set,node_color,i,color):
 	return False#没找到合适的j就没有颜色冲突
 if __name__=="__main__":
 	k=0
-	#k控制回溯
+	#k控制回溯，当k遍历所有节点后，如果成功则为1个解
 	while k>=0:
 		while node_color[k]<=2:
 			node_color[k]+=1#选择颜色，有1,2,3可选
