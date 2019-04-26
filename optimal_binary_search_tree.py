@@ -24,14 +24,14 @@ def calc_optimal():
 			j=i+dimension
 			min_val=65535
 			for k in range(i,j+1):#决定谁当父节点
-				if solution[i][k-1]+solution[k+1][j]<min_val:
+				if solution[i][k-1]+solution[k+1][j]<min_val:#如果小于当前最优值，更新
 					min_val=solution[i][k-1]+solution[k+1][j]#更新最优值
 					min_k=k
 			solution[i][j]=min_val#更新最优值
 			result[i][j]=min_k#更新最优断开位置k
 			sum_prob=0
 			for index in range(i-1,j):#从i-1加到j-1把所有节点的查找概率加入
-				sum_prob+=probablity[index]
+				sum_prob+=probablity[index]#累计相加
 			solution[i][j]+=sum_prob
 	print(solution[1][len(probablity)])
 	#print("result",result)
