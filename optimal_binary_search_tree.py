@@ -27,7 +27,7 @@ def calc_optimal():
 			for k in range(i,j+1):#决定谁当父节点
 				if solution[i][k-1]+solution[k+1][j]<min_val:#如果小于当前最优值，更新
 					min_val=solution[i][k-1]+solution[k+1][j]#更新最优值
-					min_k=k
+					min_k=k#最优父节点
 			solution[i][j]=min_val#更新最优值
 			result[i][j]=min_k#更新最优断开位置k
 			sum_prob=0
