@@ -30,7 +30,7 @@ def calc_optimal():
 					min_k=k#最优父节点
 			solution[i][j]=min_val#更新最优值
 			result[i][j]=min_k#更新最优断开位置k
-			sum_prob=0
+			sum_prob=0#累加值
 			for index in range(i-1,j):#从i-1加到j-1把所有节点的查找概率加入
 				sum_prob+=probablity[index]#累计相加
 			solution[i][j]+=sum_prob
