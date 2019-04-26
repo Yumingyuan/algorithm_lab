@@ -13,7 +13,7 @@ def print_result(i,j):
 		print(")",end='')
 #对solution进行初始化
 def initial():
-	#遍历可能性
+	#遍历节点查找的可能概率
 	for i in range(len(probablity)):
 		solution[i+1][i+1]=probablity[i]#查找“i+1”这个点的单个概率
 		result[i+1][i+1]=i+1
