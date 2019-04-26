@@ -34,7 +34,7 @@ def calc_optimal():
 			for index in range(i-1,j):#从i-1加到j-1把所有节点的查找概率加入
 				sum_prob+=probablity[index]#累计相加
 			solution[i][j]+=sum_prob
-	print(solution[1][len(probablity)])
+	print(solution[1][len(probablity)])#打印结果
 	#print("result",result)
 	print_result(1,4)#构造结果
 if __name__=="__main__":
