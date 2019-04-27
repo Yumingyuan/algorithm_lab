@@ -22,10 +22,12 @@ def min_max_method2(search_data,low,high):#分治法进行搜索函数
 	mid_num=int((low+high)/2)
 	x1,y1=min_max_method2(search_data,low,mid_num)
 	x2,y2=min_max_method2(search_data,mid_num+1,high)
+	#比较大小
 	if x1<x2:
 		x=x2
 	else:
 		x=x1
+	#比较大小
 	if y1<y2:
 		y=y1
 	else:
