@@ -6,8 +6,8 @@
 '''
 def initial_permutation(key):
 	j=0
-	key_vector=[]
-	sbox_vector=[i for i in range(256)]
+	key_vector=[]#密钥响亮
+	sbox_vector=[i for i in range(256)]#S盒
 	key_length=len(key)
 	#初始化密钥向量空间
 	for i in range(0,256):
