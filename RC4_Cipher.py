@@ -34,7 +34,7 @@ def rc4_encrypt(sbox_list,encrypt_data):
 		sbox_list[i],sbox_list[j]=sbox_list[j],sbox_list[i]#换位
 		xor_index=(sbox_list[i]+sbox_list[j])%256#计算需要参与xor的元素索引
 		crypt_result+=chr(sbox_list[xor_index]^ord(character))#字符串累加，将ascii码xor后的数转为字符累加
-	return crypt_result
+	return crypt_result#返回计算结果
 if __name__=="__main__":
 	input_key=str(input("input string key>"))#输入密钥
 	input_encrypt_data=str(input("input data need encrypt>"))#输入待加密数据
