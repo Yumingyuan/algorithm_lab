@@ -42,6 +42,6 @@ if __name__=="__main__":
 	#sbox_backup=sbox_result#浅拷贝不行！！！可import copy解决
 	sbox_backup=initial_permutation(input_key)#初始化解密用sbox（加密处理后的sbox_result已经被扰乱了）
 	encrypt_result=rc4_encrypt(sbox_result,input_encrypt_data)#加密函数调用
-	print("encrypted result:",encrypt_result)
+	print("encrypted result:",encrypt_result)#打印加密结果
 	decrypt_result=rc4_encrypt(sbox_backup,encrypt_result)#解密函数调用
 	print("decrypted result:",decrypt_result)#打印解密结果
