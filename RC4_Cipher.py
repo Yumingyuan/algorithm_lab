@@ -44,4 +44,4 @@ if __name__=="__main__":
 	encrypt_result=rc4_encrypt(sbox_result,input_encrypt_data)#加密函数调用
 	print("encrypted result:",encrypt_result)
 	decrypt_result=rc4_encrypt(sbox_backup,encrypt_result)#解密函数调用
-	print("decrypted result:",decrypt_result)
+	print("decrypted result:",decrypt_result)#打印解密结果
