@@ -4,6 +4,8 @@ def calc_optimal(project_data,project_num,money):
 	#计算最优投资额的向量
 	selection_income=[[0 for i in rang(money+1)] for j in range(project_num+1)]#多生成一个投资8万也会盈利0元的项目作为边缘的计算变量
 	#计算过程，反向计算
+	for i in range(project_num-1,-1,-1):#从2号项目到0号项目
+		
 if __name__=="__main__":
 	#投资金额及收回的金额，下标为投资金额，盈利为数据
 	project_num=3
