@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 #动态规划计算最优值函数
-def calc_optimal(project_data,num,money):
-	
+def calc_optimal(project_data,project_num,money):
+	#计算最优投资额的向量
+	selection_income=[[0 for i in rang(money+1)] for j in range(project_num)]
 if __name__=="__main__":
 	#投资金额及收回的金额，下标为投资金额，盈利为数据
 	project_num=3
