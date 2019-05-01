@@ -9,6 +9,7 @@ def calc_optimal(project_data,project_num,money):
 			max_num=0#小值
 			if max_num<project_data[i][j]+selection_income[i+1][money-j]:
 				max_num=project_data[i][j]+selection_income[i+1][money-j]#实时最优值
+			
 if __name__=="__main__":
 	#投资金额及收回的金额，下标为投资金额，盈利为数据
 	project_num=3
