@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#动态规划计算最优值函数
 def calc_optimal(project_data,num,money):
 	
 if __name__=="__main__":
