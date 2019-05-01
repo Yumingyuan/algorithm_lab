@@ -18,6 +18,8 @@ def calc_optimal(project_data,project_num,money):
 	#计算过程，反向计算
 	for i in range(project_num-1,-1,-1):#从2号项目到0号项目
 		for j in range(0,money+1):#从0万到8万,决定投资i及i以后项目所花的资金
+			if i==0 and j!=money:#最后一轮只需要计算optimum_investment[0][money]
+				continue#所以可以跳过这个循环
 			max_num=0#小值
 			opti_invest_cur=0#记录当前阶段最优投资额
 			opti_invest_next=0#记录后续项目由于本阶段投资剩余投资金额数目
