@@ -8,13 +8,16 @@ def calc_optimal(edge_data,edges_num):
 	for m in range(1,edges_num):#问题规模
 		for i in range(0,edges_num-m):
 			j=i+m
+			#print("i:",i,"j:",j,"m:",m)
 			min_num=65535
-			min_k=65535
+			min_k=0
+			#print("distance:",distance)
 			for k in range(i+1,j):
+				#print("distance[i][k]",distance[i][k],distance[k][j],triangle(edge_data,i,j,k),i,j,k)
 				if min_num>distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k):
 					min_num=distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k)
 					min_k=k
-			distance[i][j]=min_num
+				distance[i][j]=min_num
 	print(distance)
 if __name__=="__main__":
 	edge_data=[[0,14,25,27,10,11,24,16],
