@@ -10,12 +10,12 @@ def calc_optimal(edge_data,edges_num):
 			j=i+m
 			min_num=65535
 			min_k=65535
-			for k in range(i+1,k):
-				if min_num>distance[i][k]+distance[k][j]+triangle(i,j,k):
+			for k in range(i+1,j):
+				if min_num>distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k):
 					min_num=distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k)
 					min_k=k
 			distance[i][j]=min_num
-		
+	print(distance)
 if __name__=="__main__":
 	edge_data=[[0,14,25,27,10,11,24,16],
 	[0,0,18,15,27,28,16,14],
@@ -25,3 +25,4 @@ if __name__=="__main__":
 	[0,0,0,0,0,0,0,27],
 	[0,0,0,0,0,0,0,0]]#上三角形
 	edges=8#八边形
+	calc_optimal(edge_data,edges)
