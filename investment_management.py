@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#构造投资额
+#构造投资额函数
 def calc_invest_option(project_num,money,optimum_investment):
 	investment_list=[]
 	investment_list.append(optimum_investment[0][8])#地一个项目投资额
