@@ -8,7 +8,7 @@ def calc_invest_option(project_num,money,optimum_investment):
 		investment_list.append(optimum_investment[i][cur_money])
 		cur_money-=investment_list[i]
 	for i in range(len(investment_list)):
-		print("project"+str(i)+":"+investment_list[i])
+		print("project "+str(i+1)+":"+str(investment_list[i]))
 #动态规划计算最优值函数
 def calc_optimal(project_data,project_num,money):
 	#计算最优投资额的向量
