@@ -3,6 +3,7 @@ probablity=[0.1,0.2,0.4,0.3]
 #生成节点个数+2行，节点个数+1列
 solution=[[0 for i in range(len(probablity)+1)] for j in range(len(probablity)+2)]
 result=[[0 for i in range(len(probablity)+1)] for j in range(len(probablity)+1)]
+#打印结果和重组
 def print_result(i,j):
 	if i==j:
 		print("node"+str(i),end='')
