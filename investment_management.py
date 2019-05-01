@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
+#构造投资额
 def calc_invest_option(project_num,money,optimum_investment):
 	investment_list=[]
-	invest.append(ment_listoptimum_investment[0][8])#地一个项目投资额
-	for i
+	investment_list.append(optimum_investment[0][8])#地一个项目投资额
+	cur_money=money-investment_list[0]#剩余资金
+	for i in range(1,project_num):
+		investment_list.append(optimum_investment[i][cur_money])
+		cur_money-=investment_list[i]
+	for i in range(len(investment_list)):
+		print("project"+str(i)+":"+investment_list[i])
 #动态规划计算最优值函数
 def calc_optimal(project_data,project_num,money):
 	#计算最优投资额的向量
@@ -24,7 +30,7 @@ def calc_optimal(project_data,project_num,money):
 			selection_income[i][j]=max_num
 			optimum_investment[i][j]=opti_invest_cur#记录对于i项目最优投资额
 	print("optimun income:",selection_income[0][money])		
-	print(optimum_investment)							
+	calc_invest_option(project_num,money,optimum_investment)	
 if __name__=="__main__":
 	#投资金额及收回的金额，下标为投资金额，盈利为数据
 	project_num=3
