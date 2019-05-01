@@ -11,7 +11,8 @@ def calc_optimal(project_data,project_num,money):
 			max_num=0#小值
 			opti_invest_cur=0#记录当前阶段最优投资额
 			opti_invest_next=0#记录后续项目由于本阶段投资剩余投资金额数目
-			for k in range(0,j):#决定投资i项目注入资金
+			for k in range(0,j+1):#决定投资i项目注入资金
+				#print("k:",k,j,i)
 				if max_num<project_data[i][k]+selection_income[i+1][j-k]:
 					max_num=project_data[i][k]+selection_income[i+1][j-k]#实时最优值
 					opti_invest_cur=k
@@ -23,7 +24,8 @@ if __name__=="__main__":
 	project_num=3
 	investment_money=8
 	project_data=[
-	[0,5,15,40,80,90.95,98,100],
+	[0,5,15,40,80,90,95,98,100],
 	[0,5,15,40,60,70,73,74,75],
-	[0,4,26,40,45,50,51,52,53]]
+	[0,4,26,40,45,50,51,52,53],
+	[0,0,0,0,0,0,0,0,0]]
 	calc_optimal(project_data,project_num,investment_money)
