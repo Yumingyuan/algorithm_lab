@@ -21,7 +21,7 @@ def calc_optimal(edge_data,edges_num):
 				distance[i][j]=min_num	
 				optim_k[i][j]=min_k			
 	print("optimum weight:",distance[0][edges_num-1])
-	#print(optim_k)
+	print(optim_k)
 if __name__=="__main__":
 	edge_data=[[0,14,25,27,10,11,24,16],
 	[0,0,18,15,27,28,16,14],
