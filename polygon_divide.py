@@ -35,7 +35,7 @@ def calc_optimal(edge_data,edges_num):
 				#print("update optimum",optim_k)		
 	print("optimum weight:",distance[0][edges_num-1])
 	print("optimal divide solution:",end='')
-	print_solution(0,7,optim_k)
+	print_solution(0,7,optim_k)#构造最优结果函数调用
 if __name__=="__main__":
 	edge_data=[[0,14,25,27,10,11,24,16],
 	[0,0,18,15,27,28,16,14],
