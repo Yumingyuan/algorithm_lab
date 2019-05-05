@@ -4,7 +4,7 @@ def print_solution(i,j,optim_k):#打印i->k->j三角形
 	if i+1==j:#如果不能形成三角形则返回
 		return
 	else:
-		print("(V"+str(i)+"V"+str(optim_k[i][j])+"V"+str(j)+")",end='')
+		print("(V"+str(i+1)+"V"+str(optim_k[i][j]+1)+"V"+str(j+1)+")",end='')
 		print_solution(i,optim_k[i][j],optim_k)#递归多边形打印(Vi->Voptim_k[i][j])
 		print_solution(optim_k[i][j],j,optim_k)#递归打印(Voptim_k[i][j]->Vj)
 #计算并返回三角形周长(i,j,k这三个点形成的)
