@@ -21,7 +21,8 @@ def calc_optimal(edge_data,edges_num):
 				if min_num>distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k):
 					min_num=distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k)
 					min_k=k
-				distance[i][j]=min_num	
+				distance[i][j]=min_num
+				print("update",distance)
 				optim_k[i][j]=min_k			
 	print("optimum weight:",distance[0][edges_num-1])
 	print(optim_k)
