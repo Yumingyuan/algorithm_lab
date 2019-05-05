@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 #计算并返回三角形周长(i,j,k这三个点形成的)
 def triangle(edge_data,i,j,k):
+	print("i",i,"j",j,"k",k)
+	print("triangle",edge_data[i][k],edge_data[k][j],edge_data[i][j])
 	return edge_data[i][k]+edge_data[k][j]+edge_data[i][j]
 #最优值计算函数
 def calc_optimal(edge_data,edges_num):
@@ -14,7 +16,7 @@ def calc_optimal(edge_data,edges_num):
 			min_k=0
 			#print("distance:",distance)
 			for k in range(i+1,j):#k是断开位置从i+1到j-1
-				#print("distance[i][k]:",distance[i][k],"distance[k][j]",distance[k][j],triangle(edge_data,i,j,k),i,j,k)
+				print("distance[i][k]:",distance[i][k],"distance[k][j]",distance[k][j],triangle(edge_data,i,j,k),i,j,k)
 				if min_num>distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k):
 					min_num=distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k)
 					min_k=k
