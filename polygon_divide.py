@@ -13,7 +13,7 @@ def calc_optimal(edge_data,edges_num):
 			min_num=65535
 			min_k=0
 			#print("distance:",distance)
-			for k in range(i+1,j):
+			for k in range(i+1,j):#k是断开位置从i+1到j-1
 				#print("distance[i][k]:",distance[i][k],"distance[k][j]",distance[k][j],triangle(edge_data,i,j,k),i,j,k)
 				if min_num>distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k):
 					min_num=distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k)
