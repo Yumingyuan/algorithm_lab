@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+#构造最优解
+def print_solution(i,j,optim_k):#打印i->k->j三角形
+	if i+1==j:#如果不能形成三角形则返回
+		return
+	else:
+		print("(V"+str(i)+"V"+str(optim_k[i][j])+"V"+str(j)+")",end='')
+		print_solution(i,optim_k[i][j],optim_k)#递归多边形打印(Vi->Voptim_k[i][j])
+		print_solution(optim_k[i][j],j,optim_k)#递归打印(Voptim_k[i][j]->Vj)
 #计算并返回三角形周长(i,j,k这三个点形成的)
 def triangle(edge_data,i,j,k):
 	#print("i",i,"j",j,"k",k)
@@ -26,7 +34,8 @@ def calc_optimal(edge_data,edges_num):
 				optim_k[i][j]=min_k	
 				#print("update optimum",optim_k)		
 	print("optimum weight:",distance[0][edges_num-1])
-	print(optim_k)
+	print("optimal divide solution:",end='')
+	print_solution(0,7,optim_k)
 if __name__=="__main__":
 	edge_data=[[0,14,25,27,10,11,24,16],
 	[0,0,18,15,27,28,16,14],
