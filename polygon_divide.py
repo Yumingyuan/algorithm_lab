@@ -16,15 +16,15 @@ def calc_optimal(edge_data,edges_num):
 			min_k=0
 			#print("distance:",distance)
 			for k in range(i+1,j):#k是断开位置从i+1到j-1
-				print("distance[i][k]:",distance[i][k],"distance[k][j]",distance[k][j],"triangle(i,j,k)",triangle(edge_data,i,j,k),i,j,k)
-				print("triangle",edge_data[i][k],edge_data[k][j],edge_data[i][j],i,j,k)
+				#print("distance[i][k]:",distance[i][k],"distance[k][j]",distance[k][j],"triangle(i,j,k)",triangle(edge_data,i,j,k),i,j,k)
+				#print("triangle",edge_data[i][k],edge_data[k][j],edge_data[i][j],i,j,k)
 				if min_num>distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k):
 					min_num=distance[i][k]+distance[k][j]+triangle(edge_data,i,j,k)
 					min_k=k
 				distance[i][j]=min_num
-				print("update dis",distance)
+				#print("update dis",distance)
 				optim_k[i][j]=min_k	
-				print("update optimum",optim_k)		
+				#print("update optimum",optim_k)		
 	print("optimum weight:",distance[0][edges_num-1])
 	print(optim_k)
 if __name__=="__main__":
