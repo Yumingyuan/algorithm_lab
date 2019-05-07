@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #构造投资额函数
 def calc_invest_option(project_num,money,optimum_investment):
-	investment_list=[]
-	investment_list.append(optimum_investment[0][8])#地一个项目投资额
+	investment_list=[]#投资额列表
+	investment_list.append(optimum_investment[0][8])#第一个项目投资额
 	cur_money=money-investment_list[0]#剩余资金
 	for i in range(1,project_num):
 		investment_list.append(optimum_investment[i][cur_money])
