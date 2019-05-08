@@ -13,5 +13,6 @@ def branch(matrix,v0):
 	while len(Queue)!=0:
 		head=Queue[0]#取出当前队手需要搜索的节点下标
 		for i in range(len(current_vertex)):
-			if length[head]+current_vertex[i]
+			if length[head]+matrix[head][i]<=length[i]:
+				length[i]=length[head]+matrix[head][i]#松弛
 	
