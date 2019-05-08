@@ -25,7 +25,7 @@ def multi(stra,strb):
 			result_list[i]=result_list[i]%10#把当前位加入当前位置
 	return reverselist(result_list[::-1])#反转列表：result_list[::-1]就相当于已经对result_list反转了
 if __name__=="__main__":
-	if len(sys.argv)!=3:
+	if len(sys.argv)!=3:#不提交参数则失败
 		print("please input 2 argument [Bigint1] [Bigint2]")
 		exit()
 	optnum_a=sys.argv[1]
