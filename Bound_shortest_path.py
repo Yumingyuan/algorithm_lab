@@ -16,4 +16,7 @@ def branch(matrix,v0):
 			if length[head]+matrix[head][i]<=length[i]:
 				length[i]=length[head]+matrix[head][i]#松弛
 				Queue.append(i)#加入队列
+		del Queue[0]#删除队首元素
+		if len(Queue)!=0:
+			current_vertex=matrix[Queue[0]]#新的搜索分支
 	
