@@ -9,9 +9,9 @@ def reverselist(need_reverse_list):#将列表进行反转
 		res+=str(need_reverse_list[j])
 	return res
 def multi(stra,strb):
-	list_a=list(stra)
+	list_a=list(stra)#对字符串创建成列表
 	list_b=list(strb)
-	#print(list_a,list_b)
+	print(list_a,list_b)
 	length_a=len(list_a)
 	length_b=len(list_b)
 	result_list=[0 for i in range(length_a+length_b)]#创建一个长度等于两个乘数长度总和的列表
