@@ -6,6 +6,7 @@ map_data_list=[
 [2,1,1,0,7],
 [65535,65535,3,7,0]]
 length=[0,65535,65535,65535,65535]
+Queue=[]#用于进行分支的队列
 def branch(matrix,v0):
 	pass
 	
