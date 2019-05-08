@@ -15,5 +15,5 @@ def branch(matrix,v0):
 		for i in range(len(current_vertex)):
 			if length[head]+matrix[head][i]<=length[i]:
 				length[i]=length[head]+matrix[head][i]#松弛
-				Queue.append(i)
+				Queue.append(i)#加入队列
 	
