@@ -20,7 +20,7 @@ def multi(stra,strb):
 			result_list[length_a-i-1+length_b-j-1]+=int(list_a[i])*int(list_b[j])#逆序存入
 			print(i,j,result_list)
 	for i in range(len(result_list)-1):
-		if result_list[i]>=10:
+		if result_list[i]>=10:#结果大于10
 			result_list[i+1]+=result_list[i]/10#大于10则进位
 			result_list[i]=result_list[i]%10#把当前位加入当前位置
 	return reverselist(result_list[::-1])#反转列表
