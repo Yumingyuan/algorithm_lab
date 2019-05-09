@@ -7,6 +7,7 @@ map_data_list=[
 [65535,65535,3,7,0]]
 length=[0,65535,65535,65535,65535]
 Queue=[]#用于进行分支的队列
+vertex_q=[]
 def branch(matrix,v0):
 	Queue.append(v0)
 	current_vertex=matrix[0]
@@ -16,8 +17,10 @@ def branch(matrix,v0):
 			if length[head]+matrix[head][i]<length[i]:#符合小于要求的，松弛
 				length[i]=length[head]+matrix[head][i]#松弛
 				Queue.append(i)#加入队列
+		vertex_q.append(Queue[0])
 		del Queue[0]#删除队首元素
 		if len(Queue)!=0:
 			current_vertex=matrix[Queue[0]]#新的搜索分支
 branch(map_data_list,0)
-print(length)
+print(length[len(length)-1])
+
