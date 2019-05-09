@@ -11,12 +11,14 @@ def branch(matrix,v0):
 	Queue.append(v0)
 	current_vertex=matrix[0]
 	while len(Queue)!=0:
-		head=Queue[0]#取出当前队手需要搜索的节点下标
+		head=Queue[0]#取出当前队首部需要搜索的节点下标
 		for i in range(len(current_vertex)):
 			if length[head]+matrix[head][i]<=length[i]:
 				length[i]=length[head]+matrix[head][i]#松弛
 				Queue.append(i)#加入队列
+		print("v"+str(Queue[0]))
 		del Queue[0]#删除队首元素
 		if len(Queue)!=0:
 			current_vertex=matrix[Queue[0]]#新的搜索分支
-	
+branch(map_data_list,0)
+print(length)
