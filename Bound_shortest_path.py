@@ -13,8 +13,9 @@ def branch(matrix,v0):
 	current_vertex=matrix[0]
 	while len(Queue)!=0:
 		head=Queue[0]#取出当前队首部需要搜索的节点下标
+		print(length,Queue)
 		for i in range(len(current_vertex)):
-			if length[head]+matrix[head][i]<length[i]:#符合小于要求的，松弛
+			if length[head]+matrix[head][i]<length[i]:#符合小于要求的，松弛,head是起始节点
 				length[i]=length[head]+matrix[head][i]#松弛
 				Queue.append(i)#加入队列
 				#vertex_q.append(i)
