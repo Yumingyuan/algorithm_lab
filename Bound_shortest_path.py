@@ -22,6 +22,6 @@ def branch(matrix,v0):
 		if len(Queue)!=0:
 			current_vertex=matrix[Queue[0]]#新的搜索分支
 branch(map_data_list,0)
-print(length[len(length)-1])
+print("length:",length[len(length)-1])
 print(vertex_q)
 
