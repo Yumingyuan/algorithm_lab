@@ -2,13 +2,41 @@
 #上界：当前已经符合要求的最小解
 #下界：没有金额约束的最优最短路
 import copy
-#def check_prune()
+path=[]#当前路径
+path.append(0)#一定经过起始点
+optimal_path=[]#最优路径
+path_length=0#当前路径的长度
+optimal_path=9999#符合要求的最优路径长度
+cost=0#当前路径的养路费
+optimal_cost=1500#符合要求的最优养路费（上界）
+def check_optimal(i):#判断剪纸
+	if length_list[-1][i]==9999:#不可达
+		return True
+	if  length_list[-1][i]+path_length+small_dis[i]>optimal_path:
+		return True
+	if value_list[-1][i]+path_cost+small_cost[i]>optimal_cost:
+		return True
+	return False
 def bound_search():
-	first_node_dist=0#从甲到当前节点距离
-	first_node_cost=0#从甲到当前节点花费
-	path=[0 for i in range(50)]#走过的路
-	current_mindist=9999
-	current_cost=0
+	global length_list
+	global value_list
+	global small_dis
+	global small_cos
+	global path
+	global cost
+	global optimal_cost
+	global optimal_path
+	global path_length
+	global length_list
+	global value_list
+	if path[-1]==49:#如果当前路径从甲到达乙了(最后一个元素为49点)
+		#更新
+		return
+	for i in range(49):
+		j=49-i#看能不能直接到
+		if check_optimal(j):
+			path_length+=
+		
 	
 def read_file():#读取文件函数,返回公路长度和养护费用列表
 	f1_list=[]#公路联通情况和每段公路的长度
@@ -46,4 +74,3 @@ if __name__=="__main__":
 	min_cost_length=floyd(value_list)
 	small_dis=to_yi_smallest_list(min_list_length)#到乙的最短距离
 	small_cos=to_yi_smallest_list(min_cost_length)#到乙的最小花费
-	print("After soft:",small_dis)
