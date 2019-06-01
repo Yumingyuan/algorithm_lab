@@ -14,17 +14,18 @@ def read_file():#读取文件函数,返回公路长度和养护费用列表
 		ls=[int(num) for num in ls]#字符串转为int数
 		f2_list.append(ls)
 	return f1_list,f2_list
-def floyd(length_list):
+def floyd(length_list):#floyd算法
 	update_length_list=[[0 for i in range(len(length_list[0]))] for i in range(len(length_list))]
 	#print("update",update_length_list)
 	update_length_list=copy.deepcopy(length_list)#把length_list深度拷贝到update_length_list
-	print("update",update_length_list)
+	#print("update",update_length_list)
 	for i in range(len(update_length_list)):
 		for j in range(len(update_length_list)):
 			for k in range(len(update_length_list)):
 				if update_length_list[i][j]>update_length_list[i][k]+update_length_list[k][j]:
 					update_length_list[i][j]=update_length_list[i][k]+update_length_list[k][j]
-	print(update_length_list)
+	return update_length_list#返回经过松弛的列表
 if __name__=="__main__":
 	length_list,value_list=read_file()
-	floyd(length_list)
+	soft_list=floyd(length_list)
+	print("After soft:",soft_list)
