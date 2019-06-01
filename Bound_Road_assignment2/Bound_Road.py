@@ -7,7 +7,7 @@ def read_file():#读取文件函数,返回公路长度和养护费用列表
 	f2=open("m2.txt","r")
 	for lines in f1:
 		ls=lines.strip('\n').split('\t')#去掉结尾的\n并把每行内容按\t分开
-		ls=[int(num) for num in ls]#字符串转为int数
+		ls=[int(num) for num in ls]#字符串转为int数!!!!!!!!!技巧
 		f1_list.append(ls)
 	for lines in f2:
 		ls=lines.strip('\n').split('\t')#去掉结尾的\n并把每行内容按\t分开
