@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-def read_file():
+def read_file():#读取文件函数
 	f1_list=[]#公路联通情况和每段公路的长度
 	f2_list=[]#公路养护费用
 	f1=open("m1.txt","r")
