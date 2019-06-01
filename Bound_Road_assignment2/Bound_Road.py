@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+#上界：当前已经符合要求的最小解
+#下界：没有金额约束的最优最短路
 import copy
 def read_file():#读取文件函数,返回公路长度和养护费用列表
 	f1_list=[]#公路联通情况和每段公路的长度
@@ -25,5 +27,7 @@ def floyd(length_list):#floyd算法
 	return update_length_list#返回经过松弛的列表
 if __name__=="__main__":
 	length_list,value_list=read_file()
-	soft_list=floyd(length_list)
-	print("After soft:",soft_list)
+	#print("Before soft:",value_list)
+	min_list_length=floyd(length_list)
+	min_cost_length=floyd(value_list)
+	#print("After soft:",min_cost_length)
