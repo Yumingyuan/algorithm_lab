@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-def read_file():#读取文件函数
+def read_file():#读取文件函数,返回公路长度和养护费用列表
 	f1_list=[]#公路联通情况和每段公路的长度
 	f2_list=[]#公路养护费用
 	f1=open("m1.txt","r")
@@ -12,4 +12,4 @@ def read_file():#读取文件函数
 		f2_list.append(ls)
 	return f1_list,f2_list
 if __name__=="__main__":
-	read_file()
+	length_list,value_list=read_file()
