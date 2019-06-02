@@ -9,7 +9,7 @@ path_length=0#当前路径的长度
 optimal_path=9999#符合要求的最优路径长度
 cost=0#当前路径的养路费
 optimal_cost=1500#符合要求的最优养路费（上界）
-def check_optimal(i):#判断剪纸
+def check_optimal(i):#判断剪支和最优
 	if length_list[-1][i]==9999:#不可达
 		return True
 	if  length_list[-1][i]+path_length+small_dis[i]>optimal_path:
@@ -35,9 +35,7 @@ def bound_search():
 	for i in range(49):
 		j=49-i#看能不能直接到
 		if check_optimal(j):
-			path_length+=
-		
-	
+			path_length+=	
 def read_file():#读取文件函数,返回公路长度和养护费用列表
 	f1_list=[]#公路联通情况和每段公路的长度
 	f2_list=[]#公路养护费用
