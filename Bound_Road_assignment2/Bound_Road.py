@@ -14,15 +14,11 @@ def bound_search():
 	global path_length
 	global optimal_path_length
 	if path[-1]==49:#如果当前扩展节点到达乙了(最后一个元素为49点)
-		#更新
+		#更新best
 		optimal_cost=cost
 		optimal_path_length=path_length
 		optimal_path=copy.deepcopy(path)
-		#print(optimal_cost)
-		#print(optimal_path_length)
-		#print(optimal_path)
 		return
-	#print(path)
 	for i in range(49):
 		j=49-i#从最后点往前扩充i:0->48,j:49->1
 		if check_optimal(j):
