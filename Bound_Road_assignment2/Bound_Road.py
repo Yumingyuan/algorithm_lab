@@ -80,7 +80,7 @@ def to_yi_smallest_list(min_list_length):#所有节点到乙的距离
 	to_yi_small_list.append(0)#乙到自己的距离和花费都为0
 	return to_yi_small_list
 if __name__=="__main__":
-	length_list,value_list=read_file()
+	length_list,value_list=read_file()#长度数据和花费数据
 	#print("Before soft:",value_list)
 	min_list_length=floyd(length_list)
 	min_cost_length=floyd(value_list)
