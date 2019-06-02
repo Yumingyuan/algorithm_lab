@@ -2,6 +2,7 @@
 #上界：当前已经符合要求的最小解
 #下界：没有金额约束的最优最短路
 import copy
+import time
 def bound_search():
 	global length_list#正常的临接长度
 	global value_list#正常的临接花费
@@ -34,7 +35,7 @@ def check_optimal(i):#判断剪支和最优
 		return False
 	if  length_list[path[-1]][i]+path_length+small_dis[i]>optimal_path_length:#当前扩展节点到i点的距离加上目前的最短路长度加从i到终点的距离大于最优值
 		return False
-	if value_list[path[-1]][i]+cost+small_cos[i]>optimal_cost:#当前扩展节点到i点的距离加上目前的最短路花费以及到终点花费大于最优值，肯定不能要了
+	if value_list[path[-1]][i]+cost+small_cos[i]>1500:#当前扩展节点到i点的距离加上目前的最短路花费以及到终点花费大于上限，肯定不能要了
 		return False
 	return True
 def read_file():#读取文件函数,返回公路长度和养护费用列表
@@ -83,7 +84,10 @@ if __name__=="__main__":
 	small_cos=to_yi_smallest_list(min_cost_length)#所有点到乙的最小花费
 	#print(small_dis)
 	#print(small_cos)
+	start=time.time()
 	bound_search()
+	stop=time.time()
+	print(stop-start)
 	print(optimal_path)
 	print(optimal_path_length)
 	print(optimal_cost)
