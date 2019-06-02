@@ -12,9 +12,9 @@ optimal_cost=1500#符合要求的最优养路费（上界）
 def check_optimal(i):#判断剪支和最优
 	if length_list[-1][i]==9999:#不可达
 		return True
-	if  length_list[-1][i]+path_length+small_dis[i]>optimal_path:
+	if  length_list[-1][i]+path_length+small_dis[i]>optimal_path:#当前扩展节点到i点的距离加上目前的最短路长度加从i到终点的距离大于最优值
 		return True
-	if value_list[-1][i]+path_cost+small_cost[i]>optimal_cost:
+	if value_list[-1][i]+path_cost+small_cost[i]>optimal_cost:#当前扩展节点到i点的距离加上目前的最短路花费以及到终点花费大于最优值，肯定不能要了
 		return True
 	return False
 def bound_search():
