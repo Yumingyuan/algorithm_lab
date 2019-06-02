@@ -11,12 +11,12 @@ cost=0#当前路径的养路费
 optimal_cost=1500#符合要求的最优养路费（上界）
 def check_optimal(i):#判断剪支和最优
 	if length_list[-1][i]==9999:#不可达
-		return True
+		return False
 	if  length_list[-1][i]+path_length+small_dis[i]>optimal_path:#当前扩展节点到i点的距离加上目前的最短路长度加从i到终点的距离大于最优值
-		return True
+		return False
 	if value_list[-1][i]+path_cost+small_cost[i]>optimal_cost:#当前扩展节点到i点的距离加上目前的最短路花费以及到终点花费大于最优值，肯定不能要了
-		return True
-	return False
+		return False
+	return True
 def bound_search():
 	global length_list
 	global value_list
@@ -29,13 +29,15 @@ def bound_search():
 	global path_length
 	global length_list
 	global value_list
-	if path[-1]==49:#如果当前路径从甲到达乙了(最后一个元素为49点)
+	if path[-1]==49:#如果当前扩展节点到达乙了(最后一个元素为49点)
 		#更新
 		return
 	for i in range(49):
 		j=49-i#看能不能直接到
 		if check_optimal(j):
-			path_length+=	
+			path_length+=	min_list_length[-1][j]
+			cost+=min_cost_length[-1][j]
+			path.append(j)
 def read_file():#读取文件函数,返回公路长度和养护费用列表
 	f1_list=[]#公路联通情况和每段公路的长度
 	f2_list=[]#公路养护费用
