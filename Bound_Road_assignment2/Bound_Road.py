@@ -59,7 +59,7 @@ def floyd(length_list):#floyd算法
 				if update_length_list[i][j]>update_length_list[i][k]+update_length_list[k][j]:
 					update_length_list[i][j]=update_length_list[i][k]+update_length_list[k][j]
 	return update_length_list#返回经过松弛的列表，有最短路
-def to_yi_smallest_list(min_list_length):
+def to_yi_smallest_list(min_list_length):#所有节点到乙的距离
 	to_yi_small_list=[]
 	for i in range(len(min_list_length)-1):
 		to_yi_small_list.append(min_list_length[i][49])
