@@ -20,9 +20,7 @@ def bound_search():
 		optimal_path_length=path_length
 		optimal_path=copy.deepcopy(path)
 		return
-	for j in range(49,-1,-1):#从49号节点向0号扩充
-		#j=49-i#从最后点往前扩充i:0->48,j:49->1
-		#print("j",j)
+	for j in range(49,-1,-1):#从49号节点向0号扩充:49->0
 		if check_optimal(j):#符合要求
 			path_length+=	length_list[path[-1]][j]
 			cost+=value_list[path[-1]][j]
