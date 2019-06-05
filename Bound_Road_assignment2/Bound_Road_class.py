@@ -41,6 +41,8 @@ class Bound_Road:
 			self.shortest_length.append(self.softed_length_list[i][49])
 		self.shortest_length.append(0)#乙到自己的距离为0
 	def check_optimal(self,i):
+		if self.current_path[-1]>=i:#如果当前扩展节点与搜索节点相同，则无需搜索
+			return False
 		if self.length_list[self.current_path[-1]][i]==9999:#当亲扩展节点到i不可达
 			return False
 		if  self.length_list[self.current_path[-1]][i]+self.current_path_length+self.shortest_length[i]>self.optimal_path_length:#当前扩展节点到i点的距离加上目前的最短路长度加从i到终点的距离大于最优值
