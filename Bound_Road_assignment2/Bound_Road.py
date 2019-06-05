@@ -7,7 +7,6 @@ def bound_search():
 	global length_list#正常的临接长度
 	global value_list#正常的临接花费
 	global small_dis#所有点到乙最短距离
-	global small_cos#所有点到乙最小花费
 	global path#当前路径
 	global cost#当前花费
 	global optimal_cost
@@ -16,6 +15,9 @@ def bound_search():
 	global optimal_path_length
 	if path[-1]==49:#如果当前扩展节点到达乙了(最后一个元素为49点)
 		#更新best
+		#print("cost:",cost)
+		#print("length:",path_length)
+		#print("path:",path)
 		optimal_cost=cost
 		optimal_path_length=path_length
 		optimal_path=copy.deepcopy(path)
@@ -30,11 +32,14 @@ def bound_search():
 			path_length-=	length_list[path[-1]][j]
 			cost-=value_list[path[-1]][j]
 def check_optimal(i):#判断剪支和最优
+	if path[-1]==i:#是已经经过的节点
+		return False
 	if length_list[path[-1]][i]==9999:#当亲扩展节点到i不可达
 		return False
 	if  length_list[path[-1]][i]+path_length+small_dis[i]>optimal_path_length:#当前扩展节点到i点的距离加上目前的最短路长度加从i到终点的距离大于最优值
 		return False
-	if value_list[path[-1]][i]+cost+small_cos[i]>1500:#当前扩展节点到i点的距离加上目前的最短路花费以及到终点花费大于上限，肯定不能要了
+	if value_list[path[-1]][i]+cost>1500:#当前扩展节点到i点的距离加上目前的最短路花费以及到终点花费大于上限，肯定不能要了
+		#+small_cos[i]
 		return False
 	return True
 def read_file():#读取文件函数,返回公路长度和养护费用列表
@@ -58,6 +63,7 @@ def floyd(length_list):#floyd算法查看经过第三点k缩短i与j之间的距
 		for j in range(len(update_length_list)):
 			for k in range(len(update_length_list)):
 				if update_length_list[i][j]>update_length_list[i][k]+update_length_list[k][j]:
+					#print("i,j,k",i,j,k)
 					update_length_list[i][j]=update_length_list[i][k]+update_length_list[k][j]
 	return update_length_list#返回经过松弛的列表，有最短路
 def to_yi_smallest_list(min_list_length):#所有节点到乙的距离
@@ -79,14 +85,13 @@ if __name__=="__main__":
 	min_list_length=floyd(length_list)
 	#print(min_list_length)
 	min_cost_length=floyd(value_list)
+	#print(min_cost_length)
 	small_dis=to_yi_smallest_list(min_list_length)#所有点到乙的最短距离
-	small_cos=to_yi_smallest_list(min_cost_length)#所有点到乙的最小花费
-	#print(small_dis)
 	#print(small_cos)
 	start=time.time()
 	bound_search()
 	stop=time.time()
-	print(stop-start)
-	print(optimal_path)
-	print(optimal_path_length)
-	print(optimal_cost)
+	print("Time cost:",stop-start)
+	print("optimal path:",optimal_path)
+	print("optimal length:",optimal_path_length)
+	print("optimal cost",optimal_cost)
