@@ -11,6 +11,16 @@ def reduce_one(data):
 			if count<0:
 				num=i
 				count=0
-	print("majority item:",num)	
+	print("majority item:",num)
+def brute_force(data):
+	data.sort()
+	middle_item=data[int(len(data)/2)]
+	count=0
+	for i in data:
+		if middle_item==i:
+			count+=1
+	if count>=int(len(data)/2):
+		print("majority item:",middle_item)
 if __name__=="__main__":
 	reduce_one(data)
+	brute_force(data)
