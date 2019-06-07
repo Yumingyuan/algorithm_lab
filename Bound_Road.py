@@ -81,13 +81,9 @@ if __name__=="__main__":
 	cost=0#当前路径的养路费
 	optimal_cost=1500#符合要求的最优养路费（上界）
 	length_list,value_list=read_file()#长度数据和花费数据
-	#print("Before soft:",value_list)
 	min_list_length=floyd(length_list)
-	#print(min_list_length)
 	min_cost_length=floyd(value_list)
-	#print(min_cost_length)
 	small_dis=to_yi_smallest_list(min_list_length)#所有点到乙的最短距离
-	#print(small_cos)
 	start=time.time()
 	bound_search()
 	stop=time.time()
