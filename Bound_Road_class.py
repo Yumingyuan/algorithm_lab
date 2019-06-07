@@ -57,7 +57,7 @@ class Bound_Road:
 			self.optimal_path=copy.deepcopy(self.current_path)#路径
 			return 
 		#还没到乙
-		for j in range(49,-1,-1):
+		for j in range(49,-1,-1):#从后往前遍历搜索节点
 			if self.check_optimal(j):
 				self.current_path_length+=self.length_list[self.current_path[-1]][j]
 				self.current_cost+=self.value_list[self.current_path[-1]][j]
