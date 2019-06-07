@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-data=[1,3,2,3,3,4,3]
+data=[1,3,2,3,3,4,3,4]
 if __name__=="__main__":
 	num=data[0]
 	count=0
