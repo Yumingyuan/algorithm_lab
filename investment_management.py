@@ -35,8 +35,8 @@ def calc_optimal(project_data,project_num,money):
 	calc_invest_option(project_num,money,optimum_investment)	
 if __name__=="__main__":
 	#投资金额及收回的金额，下标为投资金额，盈利为数据
-	project_num=3
-	investment_money=8
+	project_num=3#项目数目
+	investment_money=8#投资金额
 	project_data=[
 	[0,5,15,40,80,90,95,98,100],
 	[0,5,15,40,60,70,73,74,75],
