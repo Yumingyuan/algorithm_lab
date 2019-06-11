@@ -28,7 +28,7 @@ def calc_optimal(project_data,project_num,money):
 				if max_num<project_data[i][k]+selection_income[i+1][j-k]:
 					max_num=project_data[i][k]+selection_income[i+1][j-k]#实时最优值
 					opti_invest_cur=k#当前投资多少合理
-					opti_invest_next=j-k#为以后留下多少哦资金
+					opti_invest_next=j-k#为以后留下多少资金
 			selection_income[i][j]=max_num
 			optimum_investment[i][j]=opti_invest_cur#记录对于i项目最优投资额
 	print("optimun income:",selection_income[0][money])		
