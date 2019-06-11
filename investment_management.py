@@ -23,7 +23,7 @@ def calc_optimal(project_data,project_num,money):
 			max_num=0#小值
 			opti_invest_cur=0#记录当前阶段最优投资额
 			opti_invest_next=0#记录后续项目由于本阶段投资剩余投资金额数目
-			for k in range(0,j+1):#决定投资i项目注入资金
+			for k in range(0,j+1):#决定投资i项目注入资金0->j
 				#print("k:",k,j,i)
 				if max_num<project_data[i][k]+selection_income[i+1][j-k]:
 					max_num=project_data[i][k]+selection_income[i+1][j-k]#实时最优值
