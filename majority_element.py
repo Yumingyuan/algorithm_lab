@@ -12,7 +12,7 @@ def reduce_one(data):
 				num=i
 				count=0
 	print("majority item:",num)
-def brute_force(data):
+def brute_force_middile(data):
 	data.sort()
 	middle_item=data[int(len(data)/2)]
 	count=0
