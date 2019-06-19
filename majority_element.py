@@ -41,6 +41,7 @@ def max_search(data):
 	#print(num_list)
 if __name__=="__main__":
 	result=brute_force(data)
+	print("majority item:",result)
 	reduce_one(data)
 	brute_force_middile(data)
 	max_search(data)
