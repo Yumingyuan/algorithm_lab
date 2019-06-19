@@ -21,6 +21,7 @@ def brute_force_middile(data):
 			count+=1
 	if count>=int(len(data)/2):
 		print("majority item:",middle_item)
+def brute_force(data):
 def max_search(data):
 	max_num=max(data)
 	num_list=[0 for i in range(max_num+1)]
@@ -33,5 +34,5 @@ def max_search(data):
 	#print(num_list)
 if __name__=="__main__":
 	reduce_one(data)
-	brute_force(data)
+	brute_force_middile(data)
 	max_search(data)
