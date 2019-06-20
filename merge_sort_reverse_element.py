@@ -8,7 +8,7 @@ def merge(data,low,mid,high):
 	temp=[0 for i in range(len(data))]
 	while i<=mid and j<=high:
 		if data[i]>data[j]:
-			#i及i右侧到mid的元素都比A[j]大，由于在A[j]左侧所以逆序
+			#i及i右侧到mid的元素都比A[j]大，由于这些元素都在A[j]左侧所以逆序
 			count+=(mid-i+1)
 			temp[k]=data[j]
 			k+=1
