@@ -4,7 +4,7 @@ def merge(data,low,mid,high):
 	i=low
 	k=low
 	j=mid+1
-	count=0
+	#count=0
 	temp=[0 for i in range(len(data))]
 	while i<=mid and j<=high:
 		if data[i]>data[j]:
@@ -26,18 +26,21 @@ def merge(data,low,mid,high):
 		temp[k]=data[j]
 		k+=1
 		j+=1
-	print("After merge",temp,"count:",count)
+	for i in range(low,high+1):#将调整顺序的数据放入data中用于后续计算
+		data[i]=temp[i]
+	print("After merge",data,"count:",count)
 def sort(need_sort_list,low,high):
 	if high<=low:
 		return 
-	mid=int(low+int((high-low)/2))
-	#print('current sort data:',need_sort_list[low:high+1],"low mid and high:",low,mid,high)
+	mid=int((low+high)/2)
+	print('current sort data:',need_sort_list[low:high+1],"low mid and high:",low,mid,high)
 	sort(need_sort_list,low,mid)
 	sort(need_sort_list,mid+1,high)
 	merge(need_sort_list,low,mid,high)
 if __name__=='__main__':
 	global count
-	list_unsort=[2,10,13,18,19,1,3,5,7,9]
+	count=0
+	list_unsort=[1,7,2,9,6,4,5,3]
 	#print("before_sort:",list_unsort)
 	sort(list_unsort,0,len(list_unsort)-1)
 	print("count num",count)
