@@ -16,7 +16,7 @@ class Array(object):
 		return self.items[index]
 	def __setitem__(self,index,newitem):
 		if index>=len(self.items):
-			print("Error set index!",index,"the array length is:",len(self.items))
+			print("Error set index!",index,"the array length is:",len(self.items))#错误提示
 			return
 		else:
 			self.items[index]=newitem
@@ -27,4 +27,4 @@ if __name__=="__main__":
 	for i in range(len(a)):
 		a[i]=i+1
 	print("after replace content:",a)
-	a[5]=5#无效的访问index
+	a[5]=5#无效的访问index，代码会提示错误
