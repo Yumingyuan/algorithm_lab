@@ -29,5 +29,5 @@ if __name__=="__main__":
 	print("after replace content:",a)
 	a[5]=5#无效的访问index，代码会提示错误
 	print("iter result:")
-	for item in a:
+	for item in a:#按照__iter__遍历
 		print(item)
