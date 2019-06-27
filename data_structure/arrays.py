@@ -16,7 +16,8 @@ class Array(object):
 		return self.items[index]
 	def __setitem__(self,index,newitem):
 		if index>=len(self.items):
-			return 
+			print("Error set index!",index,"the array length is:",len(self.items))
+			return
 		else:
 			self.items[index]=newitem
 if __name__=="__main__":
@@ -26,3 +27,4 @@ if __name__=="__main__":
 	for i in range(len(a)):
 		a[i]=i+1
 	print("after replace content:",a)
+	a[6]=5
