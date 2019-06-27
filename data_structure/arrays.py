@@ -31,3 +31,5 @@ if __name__=="__main__":
 	print("iter result:")
 	for item in a:#按照__iter__遍历
 		print(item)#输出每个迭代的元素
+	a[4]=100
+	print("after replace content:",a)
