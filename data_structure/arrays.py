@@ -14,7 +14,7 @@ class Array(object):
 		if index>=len(self.items):
 			return 0
 		return self.items[index]
-	def __setitem_(self,index,newitem):
+	def __setitem__(self,index,newitem):
 		if index>=len(self.items):
 			return 
 		else:
