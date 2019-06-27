@@ -28,3 +28,6 @@ if __name__=="__main__":
 		a[i]=i+1
 	print("after replace content:",a)
 	a[5]=5#无效的访问index，代码会提示错误
+	print("iter result:")
+	for item in a:
+		print(item)
