@@ -27,4 +27,4 @@ if __name__=="__main__":
 	for i in range(len(a)):
 		a[i]=i+1
 	print("after replace content:",a)
-	a[6]=5
+	a[5]=5#无效的访问index
