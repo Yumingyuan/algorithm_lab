@@ -30,4 +30,4 @@ if __name__=="__main__":
 	a[5]=5#无效的访问index，代码会提示错误
 	print("iter result:")
 	for item in a:#按照__iter__遍历
-		print(item)
+		print(item)#输出每个迭代的元素
