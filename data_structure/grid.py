@@ -19,5 +19,5 @@ class Grid(object):
 		return result
 if __name__=="__main__":
 	matrix=Grid(3,3,3)
-	print(matrix[0])
+	print(matrix)
 				
