@@ -33,4 +33,4 @@ if __name__=="__main__":
 	print(matrix)			
 	print("negative num index",matrix.search_negative())
 	matrix[1][2]=-2
-	print(matrix.search_negative())
+	print("negative num index",matrix.search_negative())
