@@ -18,6 +18,12 @@ class Grid(object):
 				result+=str(self.data[row][col])+" "
 			result+="\n"
 		return result
+	def search_negative(self):#第一个负数查找
+		for row in range(self.getHeight()):
+			for col in range(self.getWidth()):
+				if self.data[row][col]<0:
+					return (row,col)
+		return (row,col)
 if __name__=="__main__":
 	matrix=Grid(3,3,3)
 	print(matrix)
