@@ -11,7 +11,7 @@ class Grid(object):
 		return len(self.data[0])
 	def __getitem__(self,index):
 		return self.data[index]
-	def __str__(self):
+	def __str__(self):#修改在控制台通过print输出方式
 		result=""
 		for row in range(self.getHeight()):
 			for col in range(self.getWidth()):
@@ -24,4 +24,4 @@ if __name__=="__main__":
 	for row in range(matrix.getHeight()):
 		for column in range(matrix.getWidth()):
 			matrix[row][column]=row*column
-	print(str(matrix))			
+	print(matrix)			
