@@ -15,9 +15,13 @@ class Grid(object):
 		result=""
 		for row in range(self.getHeight()):
 			for col in range(self.getWidth()):
-				result+=str(self.data[row][col])+" \n"
+				result+=str(self.data[row][col])+" "
+			result+="\n"
 		return result
 if __name__=="__main__":
 	matrix=Grid(3,3,3)
 	print(matrix)
-				
+	for row in range(matrix.getHeight()):
+		for column in range(matrix.getWidth()):
+			matrix[row][column]=row*column
+	print(str(matrix))			
