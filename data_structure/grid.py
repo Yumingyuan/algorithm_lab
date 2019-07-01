@@ -18,4 +18,6 @@ class Grid(object):
 				result+=str(self.data[row][col])+" \n"
 		return result
 if __name__=="__main__":
+	matrix=Grid(3,3,3)
+	print(matrix)
 				
