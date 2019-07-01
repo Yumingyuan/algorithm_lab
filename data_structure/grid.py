@@ -9,5 +9,6 @@ class Grid(object):
 		return len(self.data)
 	def getWidth(self):#获取列数
 		return len(self.data[0])
-	
+	def __getitem__(self,index):
+		return self.data[index]
 	
