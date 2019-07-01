@@ -11,4 +11,11 @@ class Grid(object):
 		return len(self.data[0])
 	def __getitem__(self,index):
 		return self.data[index]
-	
+	def __str__(self):
+		result=""
+		for row in range(self.getHeight()):
+			for col in range(self.getWidth()):
+				result+=str(self.data[row][col])+" \n"
+		return result
+if __name__=="__main__":
+				
