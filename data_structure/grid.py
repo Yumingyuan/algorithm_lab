@@ -31,6 +31,6 @@ if __name__=="__main__":
 		for column in range(matrix.getWidth()):
 			matrix[row][column]=row*column
 	print(matrix)			
-	print(matrix.search_negative())
+	print("negative num index",matrix.search_negative())
 	matrix[1][2]=-2
-	print(matrix)
+	print(matrix.search_negative())
