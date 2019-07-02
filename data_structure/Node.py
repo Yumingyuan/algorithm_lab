@@ -3,9 +3,14 @@ class Node(object):
 	def __init__(self,data,next=None):
 		self.data=data
 		self.next=next
+def test_node():
+	for count in range(1,6):
+		head=Node('data'+str(count),head)
+	return head
+def iter_node(head):
+	while head!=None:
+		print(head.data)
+		head=head.next
 if __name__=="__main__":
-	node2=Node("data1",None)
-	node3=Node("data2",node2)
-	print(node3.next.data)#访问node3的下一个元素的存储内容
-	node1=Node("data3",node3)
-	print(node1.next.next.data)
+	head_node=test_node()
+	iter_note(head_node)
