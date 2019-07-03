@@ -10,7 +10,7 @@ def test_node():#创建链表函数(头部插入法)
 		print("create node",head)
 	return head#返回头节点
 def iter_node(head):#遍历链表
-	probe=head#获取头指针位置
+	probe=head#获取头指针位置,用临时指针probe遍历节点
 	while probe!=None:
 		print(probe.data+" ",end='')
 		probe=probe.next
