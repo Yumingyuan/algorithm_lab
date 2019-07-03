@@ -35,7 +35,7 @@ if __name__=="__main__":
 	print("iter node!")
 	iter_node(head_node)
 	print("")
-	search_by_data(head_node,'data5')
-	search_by_data(head_node,'data7')
-	search_by_ith_item(head_node,5)
-	search_by_ith_item(head_node,2)
+	search_by_data(head_node,'data5')#搜索数据为data5的节点
+	search_by_data(head_node,'data7')#搜索数据为data3的节点
+	search_by_ith_item(head_node,5)#搜索链表第6项
+	search_by_ith_item(head_node,2)#搜索链表地3项
