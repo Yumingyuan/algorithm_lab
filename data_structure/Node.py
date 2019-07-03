@@ -8,7 +8,7 @@ def test_node():
 	for count in range(1,6):
 		head=Node('data'+str(count),head)
 	return head#返回头节点
-def iter_node(head):
+def iter_node(head):#遍历链表
 	while head!=None:
 		print(head.data)
 		head=head.next
