@@ -14,6 +14,9 @@ def iter_node(head):#遍历链表
 	while probe!=None:
 		print(probe.data+" ",end='')
 		probe=probe.next
+def search(head,search_data):
+	probe=head#获取头节点
+	while probe!=None and search_data!=probe.data:#当next不为空，且搜索数据与存储数据不一致时，则访问链表下一个元素
 if __name__=="__main__":
 	head_node=test_node()
 	print("iter node!")
