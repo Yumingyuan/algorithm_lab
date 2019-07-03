@@ -14,7 +14,7 @@ def iter_node(head):#遍历链表
 	while probe!=None:
 		print(probe.data+" ",end='')
 		probe=probe.next
-def search(head,search_data):
+def search_by_data(head,search_data):
 	probe=head#获取头节点
 	while probe!=None and search_data!=probe.data:#当next不为空，且搜索数据与存储数据不一致时，则访问链表下一个元素
 		probe=probe.next
@@ -22,10 +22,20 @@ def search(head,search_data):
 		print("We got the data",probe.data)
 	else:#因为搜索到None而推出，则搜索失败
 		print(search_data,"not in list")
+def search_by_ith_item(head,i):
+	probe=head
+	for x in range(i):
+		probe=probe.next
+	if probe==None:
+		print("Error index")
+	else:
+		print(probe.data)
 if __name__=="__main__":
 	head_node=test_node()
 	print("iter node!")
 	iter_node(head_node)
 	print("")
-	search(head_node,'data5')
-	search(head_node,'data7')
+	search_by_data(head_node,'data5')
+	search_by_data(head_node,'data7')
+	search_by_ith_item(head_node,5)
+	search_by_ith_item(head_node,2)
