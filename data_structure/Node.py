@@ -20,7 +20,7 @@ def search(head,search_data):
 		probe=probe.next
 	if probe!=None:#找到数据了
 		print("We got the data",probe.data)
-	else:
+	else:#因为搜索到None而推出，则搜索失败
 		print(search_data,"not in list")
 if __name__=="__main__":
 	head_node=test_node()
