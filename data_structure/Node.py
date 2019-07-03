@@ -22,7 +22,7 @@ def search_by_data(head,search_data):
 		print("We got the data",probe.data)
 	else:#因为搜索到None而推出，则搜索失败
 		print(search_data,"not in list")
-def search_by_ith_item(head,i):
+def search_by_ith_item(head,i):#查找链表中的第i项数据，i范围0->n-1
 	probe=head
 	for x in range(i):
 		probe=probe.next
