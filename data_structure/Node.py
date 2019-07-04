@@ -48,5 +48,6 @@ if __name__=="__main__":
 	search_by_data(head_node,'data7')#搜索数据为data3的节点
 	search_by_ith_item(head_node,5)#搜索链表第6项
 	search_by_ith_item(head_node,2)#搜索链表地3项
-	sub_by_data(head_node,'data5','data8')#修改data5为data8
+	sub_by_data(head_node,'data3','data8')#修改data3为data8
+	print("After sub:",end='')
 	iter_node(head_node)
