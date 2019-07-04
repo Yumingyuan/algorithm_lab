@@ -43,6 +43,12 @@ def sub_by_ith_index(head,i,sub_data):
 	probe=head
 	for x in range(i):
 		probe=probe.next
+	if probe==None:
+		print("Error index")
+	else:
+		probe.data=sub_data
+		print("After sub by index:",end='')
+		iter_node(head)#遍历调用
 if __name__=="__main__":
 	head_node=test_node()
 	print("iter node!")
@@ -53,7 +59,9 @@ if __name__=="__main__":
 	search_by_ith_item(head_node,5)#搜索链表第6项
 	search_by_ith_item(head_node,2)#搜索链表地3项
 	if sub_by_data(head_node,'data3','data8'):#修改data3为data8
-		print("After sub:",end='')
+		print("After sub by data seach:",end='')
 		iter_node(head_node)
+		print("")
 	else:
 		print("No data find! can not sub")
+	sub_by_ith_index(head_node,3,"subdatayumingyuan")
