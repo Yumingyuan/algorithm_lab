@@ -18,6 +18,7 @@ def insert_tail(head,data):#尾部插入法
 		while probe.next!=None:
 			probe=probe.next#找到尾部
 		probe.next=temp_node
+		print("Insert at tail:",data)
 def iter_node(head):#遍历链表
 	probe=head#获取头指针位置,用临时指针probe遍历节点
 	while probe!=None:
@@ -74,6 +75,5 @@ if __name__=="__main__":
 	else:
 		print("No data find! can not sub")
 	sub_by_ith_index(head_node,3,"subdatayumingyuan")
-	print("Insert at tail:")
 	insert_tail(head_node,"tail_insert_data")
-	
+	iter_node(head_node)
