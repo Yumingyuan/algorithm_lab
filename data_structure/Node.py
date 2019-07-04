@@ -31,7 +31,14 @@ def search_by_ith_item(head,i):#查找链表中的第i项数据，i范围0->n-1
 	else:
 		print(probe.data)
 def sub_by_data(head,data,sub_data):
-	
+	probe=head
+	while probe!=None and data!=probe.data:
+		probe=probe.next
+	if probe!=None:
+		probe.data=sub_data
+		return True
+	else:
+		return False
 if __name__=="__main__":
 	head_node=test_node()
 	print("iter node!")
@@ -41,3 +48,5 @@ if __name__=="__main__":
 	search_by_data(head_node,'data7')#搜索数据为data3的节点
 	search_by_ith_item(head_node,5)#搜索链表第6项
 	search_by_ith_item(head_node,2)#搜索链表地3项
+	sub_by_data(head_node,'data5','data8')#修改data5为data8
+	iter_node(head_node)
