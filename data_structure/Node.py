@@ -17,7 +17,7 @@ def insert_tail(head,data):#尾部插入法
 		probe=head
 		while probe.next!=None:
 			probe=probe.next#找到尾部
-		probe.next=temp_node		
+		probe.next=temp_node
 def iter_node(head):#遍历链表
 	probe=head#获取头指针位置,用临时指针probe遍历节点
 	while probe!=None:
@@ -56,8 +56,8 @@ def sub_by_ith_index(head,i,sub_data):
 		print("Error index")
 	else:
 		probe.data=sub_data
-		print("After sub by index:",end='')
-		iter_node(head)#遍历调用
+		#print("After sub by index:",end='')
+		#iter_node(head)#遍历调用
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
