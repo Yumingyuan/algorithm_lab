@@ -3,7 +3,7 @@ class Node(object):
 	def __init__(self,data,next=None):
 		self.data=data
 		self.next=next
-def test_node():#创建链表函数(头部插入法)
+def insert_head():#创建链表函数(头部插入法)
 	head=None
 	for count in range(1,6):
 		head=Node('data'+str(count),head)
@@ -50,7 +50,7 @@ def sub_by_ith_index(head,i,sub_data):
 		print("After sub by index:",end='')
 		iter_node(head)#遍历调用
 if __name__=="__main__":
-	head_node=test_node()
+	head_node=insert_head()#头部插入法
 	print("iter node!")
 	iter_node(head_node)
 	print("")
