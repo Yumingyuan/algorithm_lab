@@ -30,6 +30,8 @@ def search_by_ith_item(head,i):#查找链表中的第i项数据，i范围0->n-1
 		print("Error index")
 	else:
 		print(probe.data)
+def sub_by_data(head,data,sub_data):
+	
 if __name__=="__main__":
 	head_node=test_node()
 	print("iter node!")
