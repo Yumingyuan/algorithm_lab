@@ -9,6 +9,15 @@ def insert_head():#创建链表函数(头部插入法)
 		head=Node('data'+str(count),head)
 		print("create node",head)
 	return head#返回头节点
+def insert_tail(head,data):#尾部插入法
+	temp_node=Node(data,None)#创建尾部要放的节点
+	if head==None:#如果没有头节点
+		head=temp_node#用头节点指向新创建节点
+	else:
+		probe=head
+		while probe.next!=None:
+			probe=probe.next#找到尾部
+		probe.next=temp_node		
 def iter_node(head):#遍历链表
 	probe=head#获取头指针位置,用临时指针probe遍历节点
 	while probe!=None:
@@ -65,3 +74,6 @@ if __name__=="__main__":
 	else:
 		print("No data find! can not sub")
 	sub_by_ith_index(head_node,3,"subdatayumingyuan")
+	print("Insert at tail:")
+	insert_tail(head_node,"tail_insert_data")
+	
