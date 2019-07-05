@@ -85,10 +85,11 @@ def node_length(head):
 	return count
 def insert_at_ith(head,i,data):#i从0到n-1
 	probe=head
-	if i>node_length(head) or i<1:
+	if i>node_length(head) or i<0:
 		return
 	else:
 		for x in range(i-1):#到插入点的前一个位置
+			print(x)
 			probe=probe.next
 		newnode=Node(data)
 		newnode.next=probe.next
@@ -118,5 +119,5 @@ if __name__=="__main__":
 	print()
 	insert_at_ith(head_node,3,"tmdaaaa")
 	iter_node(head_node)#删除一个元素后的遍历
-	insert_at_ith(head_node,1,"tmdaaaa")
+	insert_at_ith(head_node,2,"tmdaabb")
 	iter_node(head_node)#删除一个元素后的遍历
