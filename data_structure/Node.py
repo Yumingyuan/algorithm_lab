@@ -92,6 +92,8 @@ def insert_at_ith(head,i,data):#i从0到n-1
 			newnode=Node(data)
 			newnode.next=probe
 			head=newnode#newnode位置作为头节点
+			print("")
+			print("Insert OK!",data)
 			return head
 		else:
 			for x in range(i-1):#到插入点的前一个位置
@@ -100,7 +102,8 @@ def insert_at_ith(head,i,data):#i从0到n-1
 			newnode=Node(data)
 			newnode.next=probe.next
 			probe.next=newnode
-			print("\nInsert OK!",data)
+			print("")
+			print("Insert OK!",data)
 			return head
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
