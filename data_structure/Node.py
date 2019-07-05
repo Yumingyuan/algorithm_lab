@@ -64,7 +64,7 @@ def pop_tail_item(head):
 	if head.next==None:#如果只有一个元素
 		head=None
 	else:
-		probe=head
+		probe=head#从头节点开始进行搜索
 		while probe.next.next!=None:
 			probe=probe.next
 		removed_item=probe.next.data
