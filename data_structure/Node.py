@@ -69,7 +69,7 @@ def pop_tail_item(head):
 			probe=probe.next#进行next搜索
 		removed_item=probe.next.data
 		probe.next=None
-	return removed_item
+	return removed_item#返回pop的元素
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
