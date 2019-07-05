@@ -88,13 +88,20 @@ def insert_at_ith(head,i,data):#i从0到n-1
 	if i>node_length(head) or i<0:
 		return
 	else:
-		for x in range(i-1):#到插入点的前一个位置
-			print(x)
-			probe=probe.next
-		newnode=Node(data)
-		newnode.next=probe.next
-		probe.next=newnode
-		print("\nInsert OK!",data)
+		if i==0:
+			newnode=Node(data)
+			newnode.next=probe
+			head=newnode#newnode位置作为头节点
+			return head
+		else:
+			for x in range(i-1):#到插入点的前一个位置
+				#print(x)
+				probe=probe.next
+			newnode=Node(data)
+			newnode.next=probe.next
+			probe.next=newnode
+			print("\nInsert OK!",data)
+			return head
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
@@ -119,5 +126,5 @@ if __name__=="__main__":
 	print()
 	insert_at_ith(head_node,3,"tmdaaaa")
 	iter_node(head_node)#删除一个元素后的遍历
-	insert_at_ith(head_node,2,"tmdaabb")
+	head_node=insert_at_ith(head_node,0,"tmdaabb")
 	iter_node(head_node)#删除一个元素后的遍历
