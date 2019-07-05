@@ -59,6 +59,17 @@ def sub_by_ith_index(head,i,sub_data):
 		probe.data=sub_data
 		#print("After sub by index:",end='')
 		#iter_node(head)#遍历调用
+def pop_tail_item(head):
+	removed_item=head.data
+	if head.next==None:
+		head=None
+	else:
+		probe=head
+		while probe.next.next!=None:
+			probe=probe.next
+		removed_item=probe.next.data
+		probe.next=None
+	return removed_item
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
@@ -77,3 +88,5 @@ if __name__=="__main__":
 	sub_by_ith_index(head_node,3,"subdatayumingyuan")
 	insert_tail(head_node,"tail_insert_data")
 	iter_node(head_node)
+	result=pop_tail_item(head_node)
+	print("\npop for 1 time result:",result)
