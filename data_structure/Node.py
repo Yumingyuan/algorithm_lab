@@ -68,7 +68,7 @@ def pop_tail_item(head):
 		while probe.next.next!=None:#如果当前节点的下一个节点的next指向None，则便利到了第n-2项，准备删除第n项
 			probe=probe.next#进行next搜索
 		removed_item=probe.next.data
-		probe.next=None
+		probe.next=None#第n-2项的next设置为None
 	return removed_item#返回pop的元素
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
