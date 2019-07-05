@@ -61,7 +61,7 @@ def sub_by_ith_index(head,i,sub_data):
 		#iter_node(head)#遍历调用
 def pop_tail_item(head):
 	removed_item=head.data
-	if head.next==None:
+	if head.next==None:#如果只有一个元素
 		head=None
 	else:
 		probe=head
