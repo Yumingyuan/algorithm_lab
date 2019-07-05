@@ -65,7 +65,7 @@ def pop_tail_item(head):
 		head=None
 	else:
 		probe=head#从头节点开始进行搜索
-		while probe.next.next!=None:
+		while probe.next.next!=None:#如果当前节点的下一个节点的next指向None，则便利到了第n-2项，准备删除第n项
 			probe=probe.next
 		removed_item=probe.next.data
 		probe.next=None
