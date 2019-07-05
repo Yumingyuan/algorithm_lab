@@ -70,6 +70,11 @@ def pop_tail_item(head):
 		removed_item=probe.next.data
 		probe.next=None#第n-2项的next设置为None
 	return removed_item#返回pop的元素
+def pop_item_from_head(head):
+	removed_Item=head.data
+	head=head.next#head指针指向下一个元素
+def insert_at_ith(head,i):#i从0到n-1
+	
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
