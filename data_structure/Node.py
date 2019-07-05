@@ -73,8 +73,24 @@ def pop_tail_item(head):
 def pop_item_from_head(head):#从收不删除数据
 	removed_Item=head.data
 	head=head.next#head指针指向下一个元素
+def node_length(head):
+	probe=head
+	if probe!=None:
+		count=1
+	else:
+		count=0
+	while probe!=None:
+		count+=1
+		probe=probe.next
+	return count
 def insert_at_ith(head,i):#i从0到n-1
-	
+	probe=head
+	if i>node_length(head) or i<1:
+		return
+	else:
+		for x in range(i-1):#到插入点的前一个位置
+			probe=probe.next
+		newnode=Node()
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
