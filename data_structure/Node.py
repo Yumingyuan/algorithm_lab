@@ -90,3 +90,4 @@ if __name__=="__main__":
 	iter_node(head_node)
 	result=pop_tail_item(head_node)
 	print("\npop for 1 time result:",result)
+	iter_node(head_node)
