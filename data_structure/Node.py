@@ -103,7 +103,7 @@ def insert_at_ith(head,i,data):#i从0到n-1
 			newnode.next=probe.next
 			probe.next=newnode
 			print("")
-			print("Insert OK!",data)
+			print("Insert OK!",data)#插入成功
 			return head
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
