@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 class Node(object):
 	def __init__(self,data,next=None):
-		self.data=data
-		self.next=next
+		self.data=data#初始化数据
+		self.next=next#初始化next
 def insert_head():#创建链表函数(头部插入法)
 	head=None
 	for count in range(1,6):
