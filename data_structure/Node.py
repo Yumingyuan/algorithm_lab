@@ -113,6 +113,12 @@ def delete_at_ith(head,i):#i从0到n-1
 		if i=0:
 			removed_item=probe.data#获取地一个元素的数据部分
 			head=probe.next#head只需要指向head的下一个元素内存地址即可
+			return head,removed_item
+		else:
+			for x in range(i-1):
+				probe=probe.next
+				removed_item=probe.next.data
+				probe.next=probe.next.next#next不再指向被删除的那一项
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
