@@ -148,6 +148,6 @@ if __name__=="__main__":
 	head_node=insert_at_ith(head_node,0,"tmdaabb")
 	iter_node(head_node)#删除一个元素后的遍历
 	data,head_node=delete_at_ith(head_node,0)
-	print("\nremoved_data:",data)
+	print("removed_data:",data)
 	iter_node(head_node)
 	
