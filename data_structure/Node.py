@@ -104,7 +104,7 @@ def insert_at_ith(head,i,data):#i从0到n-1
 			probe.next=newnode
 			print("")
 			print("Insert OK!",data)#插入成功
-			return head
+			return head#返回经过调整后的链表首部元素地址
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
