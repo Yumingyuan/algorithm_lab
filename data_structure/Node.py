@@ -105,6 +105,13 @@ def insert_at_ith(head,i,data):#i从0到n-1
 			print("")
 			print("Insert OK!",data)#插入成功
 			return head#返回经过调整后的链表首部元素地址
+def delete_at_ith(head,i):#i从0到n-1
+	probe=head
+	if i>node_length(head) or i<0:
+		return
+	else:
+		if i=0:
+			removed_item=probe.data#获取地一个元素的数据部分
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
