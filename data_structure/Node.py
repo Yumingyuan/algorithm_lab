@@ -24,6 +24,7 @@ def iter_node(head):#遍历链表
 	while probe!=None:
 		print(probe.data+" ",end='')
 		probe=probe.next
+	print()#跳出便利后打印换行一次
 def search_by_data(head,search_data):
 	probe=head#获取头节点
 	while probe!=None and search_data!=probe.data:#当next不为空，且搜索数据与存储数据不一致时，则访问链表下一个元素
@@ -110,15 +111,16 @@ def delete_at_ith(head,i):#i从0到n-1
 	if i>node_length(head) or i<0:
 		return
 	else:
-		if i=0:
+		if i==0:
 			removed_item=probe.data#获取地一个元素的数据部分
 			head=probe.next#head只需要指向head的下一个元素内存地址即可
-			return head,removed_item
+			return removed_item,head
 		else:
 			for x in range(i-1):
 				probe=probe.next
-				removed_item=probe.next.data
-				probe.next=probe.next.next#next不再指向被删除的那一项
+			removed_item=probe.next.data
+			probe.next=probe.next.next#next不再指向被删除的那一项
+			return removed_item,head
 if __name__=="__main__":
 	head_node=insert_head()#头部插入法
 	print("iter node!")
@@ -145,3 +147,7 @@ if __name__=="__main__":
 	iter_node(head_node)#删除一个元素后的遍历
 	head_node=insert_at_ith(head_node,0,"tmdaabb")
 	iter_node(head_node)#删除一个元素后的遍历
+	data,head_node=delete_at_ith(head_node,0)
+	print("\nremoved_data:",data)
+	iter_node(head_node)
+	
