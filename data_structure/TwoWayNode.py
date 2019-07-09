@@ -13,3 +13,7 @@ if __name__=="__main__":
 	for data in range(2,6):
 		tail.next=TwoWayNode(data,tail)#用当前尾部的next指针指向新创建的节点
 		tail=tail.next#尾插法指向当前创建的双向链表节点
+	probe=tail
+	while probe!=None:
+		print(probe.data)
+		probe=probe.previous
