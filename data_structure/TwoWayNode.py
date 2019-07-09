@@ -11,5 +11,5 @@ if __name__=="__main__":
 	head=TwoWayNode(1)#初始化一个链表
 	tail=head
 	for data in range(2,6):
-		tail.next=TwoWayNode(data,tail)
+		tail.next=TwoWayNode(data,tail)#用当前尾部的next指针指向新创建的节点
 		tail=tail.next#尾插法指向当前创建的双向链表节点
