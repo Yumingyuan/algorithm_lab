@@ -5,7 +5,7 @@ class Node(object):
 		self.next=next#初始化next
 class TwoWayNode(Node):#继承了Node类的实例化方法
 	def __init__(self,data,previous=None,next=None):
-		Node.__init__(self,data,next)
+		Node.__init__(self,data,next)#使用父类初始化节点
 		self.previous=previous
 if __name__=="__main__":
 	head=TwoWayNode(1)#初始化一个链表
